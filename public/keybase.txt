@@ -1,0 +1,56 @@
+==================================================================
+https://keybase.io/raul_dipeas
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://rauldipeas.surge.sh
+  * I am raul_dipeas (https://keybase.io/raul_dipeas) on keybase.
+  * I have a public key ASDvtxY5tLSCl21WhfuRIxP3flsCE-djZxU1kBmBoW-vrQo
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "01203586ddf070b2bb4482d851aa80da86788c1584885ea93f9993e095a6317c7cb00a",
+      "host": "keybase.io",
+      "kid": "0120efb71639b4b482976d5685fb912313f77e5b0213e763671535901981a16fafad0a",
+      "uid": "b89c0123ec1b6fcc4f71b41ff7e17219",
+      "username": "raul_dipeas"
+    },
+    "merkle_root": {
+      "ctime": 1636857634,
+      "hash": "cec7776d7adfc063114e41dc39e5d363ffb3005224ed7202dd38e0d2d024f5094af70c86a4c77316ada02996b95b5d71bb4956374d62d5de3c2e18a91e1d3bf8",
+      "hash_meta": "7763330714afdf10d2050477e2791db6ea54f1f5d05e1b9c4a7330c9d92844f9",
+      "seqno": 21215359
+    },
+    "service": {
+      "entropy": "s1QZRNRkC0U6hlTONmLyq9sQ",
+      "hostname": "rauldipeas.surge.sh",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 2
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "5.8.1"
+  },
+  "ctime": 1636857684,
+  "expire_in": 504576000,
+  "prev": "76e2807c66f2bbed465bbf75e9db34bccc85237597f8962135b81cb26536b0ac",
+  "seqno": 36,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEg77cWObS0gpdtVoX7kSMT935bAhPnY2cVNZAZgaFvr60Kp3BheWxvYWTESpcCJMQgduKAfGbyu+1GW7916ds0vMyFI3WX+JYhNbgcsmU2sKzEIKhv3uD9tVZSPPtHqbdKhyODi6YWkcip55GDSA8A+o+GAgHCo3NpZ8RAAzZDa3s94gBzdK2hO/taaUQptoHi2ThgzJ3HiZgA1f6L4Kh7gCf6XGDU77G5nj5dxKWuEg0vwmV51l8b3pYGDahzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEIDW4syDWkU7qacQ73hqNSEL4OxCNOdkRnKLBA1Gt2lj8o3RhZ80CAqd2ZXJzaW9uAQ==
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/raul_dipeas
+
+==================================================================
