@@ -54,7 +54,7 @@
           <img src="assets/images/youtube.gif" class="stream-badge">
         </a>
       </div>-->
-      <script type="text/javascript">
+      <!--<script type="text/javascript">
         window.$crisp=[];
         window.CRISP_WEBSITE_ID="896e35ed-eba0-4be0-a0f8-da0b0b95a8d5";
         (
@@ -66,7 +66,23 @@
             d.getElementsByTagName("head")[0].appendChild(s);
           }
         )();
-      </script>
+      </script>-->
+      <script>
+        (function(d,t) {
+          var BASE_URL="https://app.chatwoot.com";
+          var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+          g.src=BASE_URL+"/packs/js/sdk.js";
+          g.defer = true;
+          g.async = true;
+          s.parentNode.insertBefore(g,s);
+          g.onload=function(){
+            window.chatwootSDK.run({
+              websiteToken: 'q1YZnbvptxNoyHSXrzHo58X4',
+              baseUrl: BASE_URL
+            })
+          }
+        })(document,"script");
+      </script>    
       <script>
         var myIndex = 0;
         carousel();
