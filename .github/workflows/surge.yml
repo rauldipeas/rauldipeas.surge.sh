@@ -17,6 +17,6 @@ jobs:
           login: ${{ secrets.SURGE_LOGIN }}
           token: ${{ secrets.SURGE_TOKEN }}
       - name: Limpeza de logs antigos
-        run: bash actions-cleanup.sh
+        run: bash -x actions-cleanup.sh
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
