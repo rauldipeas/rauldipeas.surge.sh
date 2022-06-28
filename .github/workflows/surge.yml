@@ -1,4 +1,4 @@
-name: Implementação no Surge
+name: Implantação no Surge
 on:
   push:
     branches:    
