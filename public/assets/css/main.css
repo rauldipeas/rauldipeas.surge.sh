@@ -1191,3 +1191,15 @@ iframe {
 @media all and (max-width: 950px) {
 	.crisp-client {display:none;};
 }
+.venom-button .venom-button-popup .hOnFlx, .ioFWLq {
+	text-transform: none;
+	text-shadow: none;
+}
+.venom-button .venom-button-popup .hDGnqR, .acKCA, .dPhWdq {
+	text-shadow: none;
+}
+
+.venom-button .venom-button-input-message textarea {
+	color: black;
+	text-shadow: none;
+}
