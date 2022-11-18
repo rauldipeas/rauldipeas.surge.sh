@@ -2,7 +2,7 @@ $(function () {
     $('#venom-button').venomButton({
         phone: '5511954421574',
         chatMessage: 'Olá 👋<br><br>Como posso te ajudar?',
-        buttonImage: 'https://raw.githubusercontent.com/PapirusDevelopmentTeam/papirus-icon-theme/master/Papirus/48x48/apps/whatsapp.svg',
+        buttonImage: 'assets/images/whatsapp.svg',
         showPopup: true,
         avatar: 'assets/images/avatar.jpg',
         position: "right",
