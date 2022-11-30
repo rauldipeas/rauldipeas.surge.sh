@@ -1191,14 +1191,45 @@ iframe {
 @media all and (max-width: 950px) {
 	.crisp-client {display:none;};
 }
+
+
+.venom-button .venom-button-popup {
+	background-color:#202c33 !important;
+}
+
+.venom-button .venom-button-popup .ewIAEB {
+	background-color: #0b141a !important;
+	background-image: url(assets/images/whatsapp-background.png);
+}
+
+.venom-button .venom-button-popup .cWUfUj .dSUAOZ {
+	background-color: #202c33 !important;
+	color: white !important;
+}
+
+.venom-button .venom-button-popup .cWUfUj .dSUAOZ .acKCA, .hOnFlx, .dPhWdq {
+	background-color: #202c33 !important;
+	color: white !important;
+}
+
 .venom-button .venom-button-popup .hOnFlx, .ioFWLq, .hDGnqR, .acKCA, .dPhWdq {
 	text-transform: none;
 	text-shadow: none;
 }
 
-.venom-button .venom-button-input-message textarea {
-	color: black;
+.venom-button .venom-button-popup svg {
+	filter: invert()
+}
+
+.venom-button .venom-button-input-message {
+	background-color: #202c33 !important;
 	text-shadow: none;
+}
+
+.venom-button .venom-button-input-message textarea {
+	background-color: #2a3942;
+	text-shadow: none;
+	border: 0px !important;
 }
 
 .topnav {
