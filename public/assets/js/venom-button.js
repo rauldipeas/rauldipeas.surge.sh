@@ -10,7 +10,7 @@ $(function () {
         showOnIE: false,
         nameClient: "Raul Dipeas",
         headerTitle: 'Técnico em informática, músico e cinéfilo.',
-        headerColor: '#202c33',
-        /* buttonColor: '#0dc143',*/
+        /*headerColor: '#202c33',*/
+        /*buttonColor: '#0dc143',*/
     });
 });

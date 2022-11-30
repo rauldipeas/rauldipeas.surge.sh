@@ -1192,14 +1192,13 @@ iframe {
 	.crisp-client {display:none;};
 }
 
-
+/*
 .venom-button .venom-button-popup {
 	background-color:#202c33 !important;
 }
 
 .venom-button .venom-button-popup .ewIAEB {
 	background-color: #0b141a !important;
-	background-image: url(https://raw.githubusercontent.com/rauldipeas/rauldipeas.surge.sh/main/public/assets/images/whatsapp-background.png);
 }
 
 .venom-button .venom-button-popup .cWUfUj .dSUAOZ {
@@ -1231,6 +1230,17 @@ iframe {
 	text-shadow: none;
 	border: 0px !important;
 }
+*/
+
+.venom-button .venom-button-popup .hOnFlx, .ioFWLq, .hDGnqR, .acKCA, .dPhWdq {
+	text-transform: none;
+	text-shadow: none;
+}
+
+.venom-button .venom-button-input-message textarea {
+	color: black;
+	text-shadow: none;
+}
 
 .topnav {
   	position: fixed;
@@ -1253,5 +1263,5 @@ iframe {
 	transition: transform .1s;
 }
 .topnav-icon:hover {
-	transform: scale(1.4) rotate(4deg);
+	transform: scale(1.4) rotate(6deg);
 }
