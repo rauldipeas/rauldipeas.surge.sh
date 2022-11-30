@@ -1124,7 +1124,7 @@ input, select, textarea {
 		filter: brightness(100%);
 	}
 	.links-svg:hover {
-		transform: scale(1) rotate(0);
+		transform: scale(1.2) rotate(0);
 		filter: brightness(100%);
 	};
 }
@@ -1191,15 +1191,36 @@ iframe {
 @media all and (max-width: 950px) {
 	.crisp-client {display:none;};
 }
-.venom-button .venom-button-popup .hOnFlx, .ioFWLq {
+.venom-button .venom-button-popup .hOnFlx, .ioFWLq, .hDGnqR, .acKCA, .dPhWdq {
 	text-transform: none;
-	text-shadow: none;
-}
-.venom-button .venom-button-popup .hDGnqR, .acKCA, .dPhWdq {
 	text-shadow: none;
 }
 
 .venom-button .venom-button-input-message textarea {
 	color: black;
 	text-shadow: none;
+}
+
+.topnav {
+  	position: fixed;
+	top: 2%;
+	right: 1%;
+	z-index: 100;
+}
+
+.topnav a {
+	padding: 0px 8px;
+}
+
+.topnav a:hover {
+	background-color: #04AA6D;
+	color: white;
+}
+.topnav-icon {
+	width: 16px;
+	margin-bottom: -2px;
+	transition: transform .1s;
+}
+.topnav-icon:hover {
+	transform: scale(1.4) rotate(4deg);
 }
