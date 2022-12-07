@@ -1251,11 +1251,13 @@ iframe {
 
 .topnav a {
 	padding: 0px 8px;
+	text-transform: none;
 }
 
 .topnav a:hover {
 	background-color: #04AA6D;
 	color: white;
+	text-transform: uppercase;
 }
 .topnav-icon {
 	width: 16px;
