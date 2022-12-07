@@ -1257,7 +1257,6 @@ iframe {
 .topnav a:hover {
 	background-color: #04AA6D;
 	color: white;
-	text-transform: uppercase;
 }
 .topnav-icon {
 	width: 16px;
