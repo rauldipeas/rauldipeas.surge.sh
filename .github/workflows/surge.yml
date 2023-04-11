@@ -5,7 +5,7 @@ on:
       - 'main'
   workflow_dispatch:
 jobs:
-  build:
+  build-jekyll:
     runs-on: ubuntu-latest
     steps:
       - name: Setup Ruby
@@ -21,7 +21,7 @@ jobs:
           cd blog
           bundle
           bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
-          mv _site ../public/blog
+          mv _site public/blog
         env:
           JEKYLL_ENV: production
   deploy:
@@ -30,6 +30,7 @@ jobs:
       - uses: actions/checkout@v3
       - name: Upload para o Surge
         uses: dswistowski/surge-sh-action@v1
+        needs: build-jekyll
         with:
           domain: 'rauldipeas.surge.sh'
           project: 'public'
