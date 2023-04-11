@@ -48,7 +48,7 @@ layout: page
           </h1>
 
           <div class="card-text post-content">
-            <img src="{{ post.image.path }}" class="preview-img" w="1200" h="630">
+            <img src="{{ post.image.path }}" class="preview-img" width="1200" height="630">
             <p>
               {% include no-linenos.html content=post.content %}
               {{ content | markdownify | strip_html | truncate: 200 | escape }}
