@@ -5,7 +5,7 @@
 @mixin dark-scheme {
   /* Framework color */
   --main-bg: rgb(0, 0, 0);
-  --mask-bg: rgb(10, 10, 10);
+  --mask-bg: rgb(68, 69, 70);
   --main-border-color: rgb(44, 45, 45);
 
   /* Common color */
@@ -35,15 +35,15 @@
 
   /* Sidebar */
   --sidebar-bg: radial-gradient(circle, #242424 0%, #1d1f27 100%);
-  --sidebar-muted-color: #6d6c6b;
+  --sidebar-muted-color: #8d8d8d;
   --sidebar-active-color: rgb(255, 255, 255, 0.8);
   --nav-cursor-color: rgb(183, 182, 182);
   --sidebar-btn-bg: rgb(117, 116, 116, 0.2);
 
   /* Topbar */
   --topbar-text-color: var(--text-color);
-  --topbar-wrapper-bg: rgb(39, 40, 43);
-  --search-wrapper-bg: rgb(34, 34, 39);
+  --topbar-wrapper-bg: rgb(0, 0, 0);
+  --search-wrapper-bg: rgb(0, 0, 0);
   --search-wrapper-border-color: rgb(34, 34, 39);
   --search-icon-color: rgb(100, 102, 105);
   --input-focus-border-color: rgb(112, 114, 115);
