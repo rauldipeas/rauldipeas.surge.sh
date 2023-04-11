@@ -35,15 +35,15 @@
 
   /* Sidebar */
   --sidebar-bg: radial-gradient(circle, #242424 0%, #1d1f27 100%);
-  --sidebar-muted-color: #c0bfbe;
+  --sidebar-muted-color: #6d6c6b;
   --sidebar-active-color: rgb(255, 255, 255, 0.8);
   --nav-cursor-color: rgb(183, 182, 182);
   --sidebar-btn-bg: rgb(117, 116, 116, 0.2);
 
   /* Topbar */
   --topbar-text-color: var(--text-color);
-  --topbar-wrapper-bg: rgb(18, 18, 19);
-  --search-wrapper-bg: rgb(18, 18, 19);
+  --topbar-wrapper-bg: rgb(10, 10, 10);
+  --search-wrapper-bg: rgb(34, 34, 39);
   --search-wrapper-border-color: rgb(34, 34, 39);
   --search-icon-color: rgb(100, 102, 105);
   --input-focus-border-color: rgb(112, 114, 115);
@@ -54,7 +54,7 @@
   --btn-paginator-hover-color: rgb(64, 65, 66);
   --btn-paginator-border-color: var(--btn-border-color);
   --btn-text-color: var(--text-color);
-  --pin-bg: rgb(16, 17, 17);
+  --pin-bg: rgb(10, 10, 10)
   --pin-color: inherit;
 
   /* Posts */
@@ -68,7 +68,7 @@
   --btn-share-color: #6c757d;
   --btn-share-hover-color: #bfc1ca;
   --relate-post-date: var(--text-muted-color);
-  --card-bg: #212121;
+  --card-bg: #101010;
   --card-hovor-bg: #3a3a3a;
   --card-border-color: rgb(53, 53, 60);
   --card-box-shadow: var(--main-bg);
