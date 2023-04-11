@@ -23,6 +23,7 @@ jobs:
           bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
           ls -l ../
           #mv _site ../public/blog
+          mv /home/runner/work/rauldipeas.surge.sh/rauldipeas.surge.sh/blog/_site /home/runner/work/rauldipeas.surge.sh/rauldipeas.surge.sh/public/blog
         env:
           JEKYLL_ENV: production
       - uses: actions/checkout@v3
