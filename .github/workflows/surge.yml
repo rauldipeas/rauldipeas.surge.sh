@@ -15,7 +15,7 @@ jobs:
           ruby-version: '3.1'
           bundler-cache: true
           cache-version: 0
-      - name: Compilação do 1Jekyll
+      - name: Compilação do Jekyll
         run: |
           cd blog
           bundle
