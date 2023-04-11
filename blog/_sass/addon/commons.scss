@@ -775,6 +775,7 @@ $sidebar-display: 'sidebar-display';
 
   .site-title {
     margin-top: 0.55rem;
+    text-transform: uppercase;
 
     a {
       @extend %clickable-transition;
