@@ -4,7 +4,7 @@ date: 2023-04-11 15:15:00 -0300
 categories: Guias
 tags: instalação de programas no ubuntu
 image:
-  path: https://i.imgur.com/YoliuSJ.jpg
+  path: https://i.imgur.com/u8YE1RC.jpg
 ---
 
 O Ubuntu, assim como todas as demais distribuições Linux, suporta uma grande variedade de formas pra instalar novos programas, dentre as mais simples como dar alguns cliques na central de programas, até a compilação de um programa diretamente do código fonte, passando por diversas outras.

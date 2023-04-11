@@ -4,7 +4,7 @@ date: 2023-04-08 16:25:00 -0300
 categories: Guias
 tags: melhore o desempenho do ubuntu
 image:
-  path: https://i.imgur.com/Sz2MFLj.jpg
+  path: https://i.imgur.com/H2wF1U6.jpg
 ---
 
 ## ![ubuntu](https://raw.githubusercontent.com/PapirusDevelopmentTeam/papirus-icon-theme/master/Papirus/22x22/apps/distributor-logo-ubuntu.svg) Ubuntu
