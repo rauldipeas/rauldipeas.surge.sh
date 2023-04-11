@@ -21,7 +21,8 @@ jobs:
           cd blog
           bundle
           bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
-          mv _site public/blog
+          ls -l ../
+          #mv _site ../public/blog
         env:
           JEKYLL_ENV: production
       - uses: actions/checkout@v3
