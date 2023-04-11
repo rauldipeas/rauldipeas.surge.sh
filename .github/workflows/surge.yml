@@ -8,25 +8,22 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Setup Ruby
+      - uses: actions/checkout@v3
+      - name: Instalação do Ruby
         uses: ruby/setup-ruby@55283cc23133118229fd3f97f9336ee23a179fcf # v1.146.0
         with:
-          ruby-version: '3.1' # Not needed with a .ruby-version file
-          bundler-cache: true # runs 'bundle install' and caches installed gems automatically
-          cache-version: 0 # Increment this number if you need to re-download cached gems
+          ruby-version: '3.1'
+          bundler-cache: true
+          cache-version: 0
       - name: Build with Jekyll
-        # Outputs to the './_site' directory by default
         run: |
           git clone https://github.com/rauldipeas/blog
           cd blog
           bundle
           bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
-          ls -l ../
           #mv _site ../public/blog
-          mv /home/runner/work/rauldipeas.surge.sh/rauldipeas.surge.sh/blog/_site /home/runner/work/rauldipeas.surge.sh/rauldipeas.surge.sh/public/blog
         env:
           JEKYLL_ENV: production
-      - uses: actions/checkout@v3
       - name: Upload para o Surge
         uses: dswistowski/surge-sh-action@v1
         with:
