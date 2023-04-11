@@ -20,14 +20,14 @@ jobs:
           cd blog
           bundle
           bundle exec jekyll build
-          mv _site ../public/blog
+          mv _site ../site/blog
         env:
           JEKYLL_ENV: production
       - name: Upload para o Surge
         uses: dswistowski/surge-sh-action@v1
         with:
           domain: 'rauldipeas.surge.sh'
-          project: 'public'
+          project: 'site'
           login: ${{ secrets.SURGE_LOGIN }}
           token: ${{ secrets.SURGE_TOKEN }}
       - name: Limpeza de logs antigos
