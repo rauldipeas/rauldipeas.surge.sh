@@ -11,9 +11,9 @@ O Ubuntu, assim como todas as demais distribuições Linux, suporta uma grande v
 
 Dentre as formas mais populares, existem os _pacotes_, que são arquivos compactados, com o conteúdo dos programas dentro, possibilitando a instalação com poucos cliques.
 
-Esses pacotes podem ser disponibilizados através dos repositórios do Ubuntu ou de repositórios de terceiros, permitindo assim que você acompanhe as atualizações assim que novas versões estiverem disponíveis, mas, também podem ser disponibilizados diretamente através de páginas na internet, sem a possibilidade de receber atualizações automaticamente.
+Esses pacotes podem ser disponibilizados através dos repositórios do Ubuntu ou de repositórios de terceiros, permitindo dessa forma que você acompanhe as atualizações assim que novas versões estiverem disponíveis, mas, também podem ser disponibilizados diretamente através de páginas na internet, sem a possibilidade de receber atualizações automaticamente.
 
-Seguindo esse conceito, vou listar alguns métodos mais populares de instalação de programas para o Ubuntu, descrevendo suas possibilidades e dando minhas recomendações sobre o potêncial uso de cada um deles.
+Seguindo esse conceito, vou listar alguns métodos mais populares de instalação de programas para o Ubuntu, descrevendo suas possibilidades e dando minhas recomendações sobre o potencial uso de cada um deles.
 
 ## ![synaptic](https://raw.githubusercontent.com/PapirusDevelopmentTeam/papirus-icon-theme/master/Papirus/22x22/apps/synaptic.svg) Synaptic
 
