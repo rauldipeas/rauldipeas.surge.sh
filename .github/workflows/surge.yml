@@ -8,22 +8,34 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - name: Instalação do Ruby
-        uses: ruby/setup-ruby@55283cc23133118229fd3f97f9336ee23a179fcf # v1.146.0
-        with:
-          ruby-version: '3.1'
-          bundler-cache: true
-          cache-version: 0
+#      - uses: actions/checkout@v3
+#      - name: Instalação do Ruby
+#        uses: ruby/setup-ruby@55283cc23133118229fd3f97f9336ee23a179fcf # v1.146.0
+#        with:
+#          ruby-version: '3.1'
+#          bundler-cache: true
+#          cache-version: 0
       - name: Compilação do Jekyll
-        run: |
-          cd blog
-          bundle
-          bundle install
-          bundle exec jekyll build
-          mv _site ../site/blog
-        env:
-          JEKYLL_ENV: production
+      - uses: actions/cache@v2
+        with:
+          path: vendor/bundle
+          key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile') }}
+          restore-keys: ${{ runner.os }}-gems-
+      - uses:  helaili/jekyll-action@v2
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          gem_src: 'blog'
+          jekyll_src: 'blog'
+          pre_build_commands: bundle
+          build_only: true
+          build_dir: site/blog
+#        run: |
+#          cd blog
+#          bundle
+#          bundle exec jekyll build
+#          mv blog/_site site/blog
+#        env:
+#          JEKYLL_ENV: production
       - name: Upload para o Surge
         uses: dswistowski/surge-sh-action@v1
         with:
