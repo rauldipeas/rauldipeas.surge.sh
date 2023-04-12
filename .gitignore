@@ -1,21 +1,19 @@
 # Bundler cache
-blog/.bundle
-blog/vendor
-blog/Gemfile.lock
-.bundler
+.bundle
 vendor
 Gemfile.lock
 
 # Jekyll cache
-blog/.jekyll-cache
-blog/_site
+.jekyll-cache
+_site
+site/blog
 
 # RubyGems
-blog/*.gem
+*.gem
 
 # NPM dependencies
-blog/node_modules
-blog/package-lock.json
+node_modules
+package-lock.json
 
 # IDE configurations
 .idea
