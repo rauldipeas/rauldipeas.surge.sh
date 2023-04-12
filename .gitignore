@@ -2,6 +2,9 @@
 blog/.bundle
 blog/vendor
 blog/Gemfile.lock
+.bundler
+vendor
+Gemfile.lock
 
 # Jekyll cache
 blog/.jekyll-cache
