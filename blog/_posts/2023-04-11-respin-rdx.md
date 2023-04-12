@@ -1,6 +1,6 @@
 ---
 title: Respin RDX
-date: 2023-05-1 12:00:00 -0300
+date: 2023-04-11 23:45:00 -0300
 categories: Distribuições
 tags: ubuntu respin rdx
 image:
