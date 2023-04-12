@@ -40,7 +40,7 @@ Alguns extras estão inclusos:
 * ![](https://raw.githubusercontent.com/PapirusDevelopmentTeam/papirus-icon-theme/master/Papirus/22x22/apps/kmenuedit.svg) [**Vala Application Menu**](https://github.com/rilian-la-te/vala-panel-appmenu) (`appmenu` para o painel do XFCE)
 * ![](https://raw.githubusercontent.com/PapirusDevelopmentTeam/papirus-icon-theme/master/Papirus/22x22/apps/cpu-x.svg) [**CPU-X**](https://thetumultuousunicornofdarkness.github.io/CPU-X) (informações de hardware)
 
-Os scripts disponíveis neste repositório, são derivados dos scripts desenvolvidos pelo [**Marcos Vallim**](https://github.com/mvallim/live-custom-ubuntu-from-scratch).
+Os scripts usados nesta compilação, são derivados dos scripts desenvolvidos pelo [**Marcos Vallim**](https://github.com/mvallim/live-custom-ubuntu-from-scratch).
 
 ## Download:
 [![ubuntu](https://raw.githubusercontent.com/PapirusDevelopmentTeam/papirus-icon-theme/master/Papirus/48x48/apps/distributor-logo-ubuntu.svg "Ubuntu")![](https://img.shields.io/github/actions/workflow/status/rauldipeas/respin-rdx/ubuntu-respin-rdx.yml?branch=main&label=Ubuntu%20Respin%20RDX&logo=GitHub&style=for-the-badge "Ubuntu")](https://nightly.link/rauldipeas/respin-rdx/workflows/ubuntu-respin-rdx/main/ubuntu-respin-rdx.zip)
