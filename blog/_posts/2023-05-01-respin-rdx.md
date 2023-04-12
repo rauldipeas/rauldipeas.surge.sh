@@ -9,7 +9,7 @@ image:
 
 ## ![respin-rdx](https://raw.githubusercontent.com/PapirusDevelopmentTeam/papirus-icon-theme/master/Papirus/22x22/apps/ubuntu-tweak.svg) Respin RDX
 
-Esta é a minha compilação pessoal dos [_sabores_](https://ubuntu.com/desktop/flavours) do [**Ubuntu**](https://ubuntu.com).
+O [**Respin RDX**](https://github.com/rauldipeas/respin-rdx) é a minha compilação pessoal dos [_sabores_](https://ubuntu.com/desktop/flavours) do [**Ubuntu**](https://ubuntu.com).
 
 A base do sistema está [**otimizada**](https://github.com/rauldipeas/respin-rdx/blob/main/scripts/enhancements/rtcqs.sh) para criação de conteúdo multimídia *(áudio, vídeo e imagem)*, com base nos parâmetros de checagem do [**rtcqs**](https://codeberg.org/rtcqs/rtcqs).
 
