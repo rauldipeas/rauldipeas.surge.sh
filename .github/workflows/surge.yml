@@ -25,7 +25,6 @@ jobs:
         uses:  helaili/jekyll-action@v2
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          gem_src: blog
           jekyll_src: blog
           pre_build_commands: bundle
           build_only: true
