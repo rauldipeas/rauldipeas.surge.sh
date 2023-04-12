@@ -15,12 +15,13 @@ jobs:
 #          ruby-version: '3.1'
 #          bundler-cache: true
 #          cache-version: 0
-      - name: Compilação do Jekyll
+      - name: Configuração de cachê
       - uses: actions/cache@v2
         with:
           path: vendor/bundle
           key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile') }}
           restore-keys: ${{ runner.os }}-gems-
+      - name: Compilação do Jekyll
       - uses:  helaili/jekyll-action@v2
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
