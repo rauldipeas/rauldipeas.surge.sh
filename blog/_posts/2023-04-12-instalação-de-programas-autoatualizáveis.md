@@ -13,11 +13,11 @@ Existem diversos programas que são fornecidos diretamente pelos desenvolvedores
 
 ## ![firefox](https://raw.githubusercontent.com/PapirusDevelopmentTeam/papirus-icon-theme/master/Papirus/22x22/apps/firefox.svg) Firefox
 
-O [**Firefox**](https://support.mozilla.org/pt-BR/kb/instale-o-firefox-no-linux) é um programa fornecido nesse formato, você baixa um arquivi compactado `.tar` direto do site da Mozilla, abre o programa e pronto, já garante que estará sempre na última versão do navegador.
+O [**Firefox**](https://support.mozilla.org/pt-BR/kb/instale-o-firefox-no-linux) é um programa fornecido nesse formato, você baixa um arquivo compactado `.tar` direto do site da Mozilla, abre o programa e pronto, já garante que estará sempre na última versão do navegador.
 
 Toda vez que você abre o navegador, ele faz uma checagem em segundo plano, pra identificar se existe alguma versão mais nova, caso haja, ele baixa e atualiza automaticamente, sem a necessidade de nenhum tipo de interação, apenas uma pequena janela é exibida, informando sobre o processo, que costuma ser bastante rápido.
 
-Talvez, você possa não ter o conhecimento necessário pra fazer uma instalação adequada do Firefox nesse formato, então vou deixar aqui uma sequência de comandos que vocẽ pode usar pra fazer isso de forma simplificada.
+Talvez, você possa não ter o conhecimento necessário pra fazer uma instalação adequada do Firefox nesse formato, então vou deixar aqui uma sequência de comandos que vocẽ pode usar pra fazer isso de forma simplificada:
 ```bash
 wget -cO firefox-latest-linux64-pt-br.tar.bz2 "https://download.mozilla.org/?product=firefox-latest&os=linux64&lang=pt-BR"
 tar fjx firefox-latest-linux64-pt-br.tar.bz2
@@ -66,7 +66,7 @@ curl -s -o- https://raw.githubusercontent.com/rafaelmardojai/firefox-gnome-theme
 
 ## ![thunderbird](https://raw.githubusercontent.com/PapirusDevelopmentTeam/papirus-icon-theme/master/Papirus/22x22/apps/thunderbird.svg) Thunderbird
 
-O [**Thunderbird**](https://support.mozilla.org/pt-BR/kb/instalando-o-thunderbird-no-linux) é um cliente de email também desenvolvido pela Mozilla e assim como o **Firefox**, também é fornecido para instalação através de um arquivo compactado `.tar` que basta ser extraído para que o programa seja executado sempre na última versão disponível.
+O [**Thunderbird**](https://support.mozilla.org/pt-BR/kb/instalando-o-thunderbird-no-linux) é um cliente de email também desenvolvido pela Mozilla e assim como o **Firefox**, também é fornecido para instalação através de um arquivo compactado `.tar`, que basta ser extraído para que o programa seja executado sempre na última versão disponível.
 
 Para instalar o **Thunderbird** da forma mais adequada, basta executar os comandos abaixo:
 ```bash
@@ -154,9 +154,9 @@ Desse modo, vou _aproveitar a deixa_ pra indicar outra forma comum de instalar p
 
 Caso tenha não tenha sido subentendido, vou tentar explicar de forma clara como funcionam os repositórios e quais as melhores práticas pra usar repositórios de terceiros.
 
-_Repositórios_ são endereços na internet, onde os pacotes de instalação dos programas são hospedados e indexados de uma forma organizada para que os gerenciadores de pacotes das distribuições possam encontrá-los de forma imediata.
+_Repositórios_ são endereços na internet, onde os pacotes de instalação dos programas são hospedados e indexados de uma forma organizada, para que os gerenciadores de pacotes das distribuições possam encontrá-los de forma imediata.
 
-Entendido esse fator, todas as distribuições tem seus repositórios próprios, onde ficam hospedados os programas que vem na instalação padrão e também pacotes de programas adicinais, que podem ser instalados posteriormente, com a curadoria de quem desenvolve a distribuição.
+Entendido esse fator, todas as distribuições tem seus repositórios próprios, onde ficam hospedados os programas que vem na instalação padrão e também pacotes de programas adicionais, que podem ser instalados posteriormente, com a curadoria de quem desenvolve a distribuição.
 
 Quando você adiciona um repositório de terceiro, pode haver incompatibilidade de versão dos pacotes ou das dependências dos mesmos, por isso a Canonical lançou o [**Launchpad**](launchpad.net), pra garantir que os pacotes disponibilizados através dos repositórios hospedados nele, fossem compatíveis com as versões do **Ubuntu** para os quais os pacotes são disponibilizados.
 
@@ -164,7 +164,7 @@ Por conta disso, mesmo ainda sendo possível que aconteça essa incompatibilidad
 
 Só vale ressaltar que é sempre bom conferir os pacotes disponíveis no repositório antes de adicionar ele ao seu sistema, por garantia.
 
-Finalmente, sem mais delongas, você pode instalar o **LibreOffice** atualizado com os comandos abaixo:
+Finalmente, sem mais delongas, você pode instalar o **LibreOffice** atualizado no **Ubuntu** com os comandos abaixo:
 ```bash
 sudo add-apt-repository ppa:libreoffice/ppa
 pkcon update
