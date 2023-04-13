@@ -156,7 +156,7 @@ yabridgectl sync --prune --verbose
 
 ## ![reaper](https://raw.githubusercontent.com/PapirusDevelopmentTeam/papirus-icon-theme/master/Papirus/32x32/apps/cockos-reaper.svg "REAPER") [REAPER](https://reaper.fm)
 
-O **REAPER** é uma estação de trabalho de áudio digital, com o qual você pode produzir música, editar áudio, editar vídeo(de maneira básica) e fazer apresentações musicais ao vivo.
+O **REAPER** é uma estação de trabalho de áudio digital, com o qual você pode produzir música, editar áudio, editar vídeo (de maneira básica) e fazer apresentações musicais ao vivo.
 
 ![reaper](https://i.imgur.com/rr91QmQ.png "REAPER")
 
