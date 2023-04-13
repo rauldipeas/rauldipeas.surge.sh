@@ -211,3 +211,5 @@ pkcon install python3-videomass
 ```
 
 ![videomass](https://i.imgur.com/Mm7XAQg.png "Videomass")
+
+Se você gostou do conteúdo desta postagem e quer receber mais conteúdos como esse, me siga no [**Twitter**](https://twitter.com/rauldipeas).
