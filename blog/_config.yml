@@ -102,10 +102,10 @@ comments:
     issue_term: # < url | pathname | title | ...>
   # Giscus options › https://giscus.app
   giscus:
-    repo: rauldipeas/blog
-    repo_id: R_kgDOJUIcdQ
+    repo: rauldipeas/rauldipeas.surge.sh
+    repo_id: R_kgDOHj8UGw
     category: General
-    category_id: DIC_kwDOJUIcdc4CVoD-
+    category_id: DIC_kwDOHj8UG84CVwgX
     mapping: title
     input_position: top
     lang: pt
