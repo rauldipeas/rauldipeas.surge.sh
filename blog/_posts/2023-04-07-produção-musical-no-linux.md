@@ -178,7 +178,7 @@ rm -rfv sws-*-Linux-x86_64-*.tar.xz
 wget -O "$HOME"/.config/REAPER/UserPlugins/reaper_reapack-x86_64.so "$(wget -qO- https://api.github.com/repos/cfillion/reapack/releases|grep browser_download_url|grep download/v|grep x86_64.so|head -n1|cut -d '"' -f4)"
 ```
 
-## ![xruns](https://raw.githubusercontent.com/PapirusDevelopmentTeam/papirus-icon-theme/master/Papirus/48x48/status/notification-audio-volume-muted.svg "xruns"){: w="32"} Boas práticas para evitar `xruns`
+## ![xruns](https://raw.githubusercontent.com/PapirusDevelopmentTeam/papirus-icon-theme/master/Papirus/48x48/status/notification-audio-volume-muted.svg "xruns"){: w="22"} Boas práticas para evitar `xruns`
 ### ![wireless](https://raw.githubusercontent.com/PapirusDevelopmentTeam/papirus-icon-theme/master/Papirus/22x22/devices/network-wireless.svg "Wireless") Desative conexões sem fio(wifi e bluetooth)
 Conexões sem fio, sabidamente causam `xruns` esporádicos.
 
