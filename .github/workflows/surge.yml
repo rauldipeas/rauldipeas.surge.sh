@@ -1,25 +1,20 @@
 name: Implantação no Surge
-on:
-  push:
-    branches:    
-      - 'main'
-  workflow_dispatch:
+on: push
 jobs:
-  deploy:
+  implantação:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - name: Conferência do repositório
+        uses: actions/checkout@v3
       - name: Instalação do Ruby
-        uses: ruby/setup-ruby@55283cc23133118229fd3f97f9336ee23a179fcf # v1.146.0
+        uses: ruby/setup-ruby@v1
         with:
-          ruby-version: '3.1'
           bundler-cache: true
-          cache-version: 0
       - name: Compilação do Jekyll
         run: bundle exec jekyll build -s blog -d site/blog
         env:
           JEKYLL_ENV: production
-      - name: Upload para o Surge
+      - name: Envio para o Surge
         uses: dswistowski/surge-sh-action@v1
         with:
           domain: 'rauldipeas.surge.sh'
@@ -27,6 +22,6 @@ jobs:
           login: ${{ secrets.SURGE_LOGIN }}
           token: ${{ secrets.SURGE_TOKEN }}
       - name: Limpeza de logs antigos
-        run: bash actions-cleanup.sh
+        run: bash scripts/actions-cleanup.sh
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
