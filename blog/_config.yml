@@ -53,7 +53,7 @@ google_site_verification: # fill in to your verification string
 # The end of `jekyll-seo-tag` settings
 
 google_analytics:
-  id: 367364854 # fill in your Google Analytics ID
+  id: # fill in your Google Analytics ID
   # Google Analytics pageviews report settings
   pv:
     proxy_endpoint: # fill in the Google Analytics superProxy endpoint of Google App Engine
@@ -187,11 +187,6 @@ compress_html:
 exclude:
   - "*.gem"
   - "*.gemspec"
-  - tools
-  - README.md
-  - CHANGELOG.md
-  - LICENSE
-  - rollup.config.js
   - node_modules
   - package*.json
 
