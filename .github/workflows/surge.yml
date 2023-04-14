@@ -1,7 +1,7 @@
 name: Implantação no Surge
 on: push
 jobs:
-  implantação:
+  deploy:
     runs-on: ubuntu-latest
     steps:
       - name: Conferência do repositório
