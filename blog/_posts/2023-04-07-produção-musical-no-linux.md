@@ -7,10 +7,10 @@ pin: true
 image:
   path: https://i.imgur.com/rr91QmQ.png
 ---
-![ubuntu](https://raw.githubusercontent.com/PapirusDevelopmentTeam/papirus-icon-theme/master/Papirus/32x32/apps/distributor-logo-ubuntu.svg "Ubuntu"){: w="150" .normal}
-![tuxguitar](https://raw.githubusercontent.com/PapirusDevelopmentTeam/papirus-icon-theme/master/Papirus/32x32/apps/tuxguitar.svg "TuxGuitar"){: w="150" .normal}
-![helvum](https://raw.githubusercontent.com/PapirusDevelopmentTeam/papirus-icon-theme/master/Papirus/32x32/apps/org.pipewire.Helvum.svg "Helvum"){: w="150" .normal}
-![música](https://raw.githubusercontent.com/PapirusDevelopmentTeam/papirus-icon-theme/master/Papirus/32x32/apps/org.gnome.Music.svg "Música"){: w="150" .normal}
+![ubuntu](https://raw.githubusercontent.com/PapirusDevelopmentTeam/papirus-icon-theme/master/Papirus/22x22/apps/distributor-logo-ubuntu.svg "Ubuntu"){: w="150" .normal}
+![tuxguitar](https://raw.githubusercontent.com/PapirusDevelopmentTeam/papirus-icon-theme/master/Papirus/22x22/apps/tuxguitar.svg "TuxGuitar"){: w="150" .normal}
+![helvum](https://raw.githubusercontent.com/PapirusDevelopmentTeam/papirus-icon-theme/master/Papirus/22x22/apps/org.pipewire.Helvum.svg "Helvum"){: w="150" .normal}
+![música](https://raw.githubusercontent.com/PapirusDevelopmentTeam/papirus-icon-theme/master/Papirus/22x22/apps/org.gnome.Music.svg "Música"){: w="150" .normal}
 
 O [**Linux**](https://linux.org) é um sistema operacional bastante abrangente (assim como o [**Windows**](https://www.microsoft.com/pt-br/windows) e o [**MacOS**](https://www.apple.com/br/macos)) e uma de suas infinitas possibilidade é a produção musical.
 
@@ -22,7 +22,7 @@ A minha escolha da vez é o [**Ubuntu**](https://ubuntu.com).
 
 Se você gosta deste tema e quer conversar com outros músicos que também usam Linux, acesse o nosso grupo no [**Telegram**](https://t.me/producaomusicalnolinux).
 
-## ![ubuntu](https://raw.githubusercontent.com/PapirusDevelopmentTeam/papirus-icon-theme/master/Papirus/32x32/apps/distributor-logo-ubuntu.svg "Ubuntu") [**Ubuntu**](https://ubuntu.com)
+## ![ubuntu](https://raw.githubusercontent.com/PapirusDevelopmentTeam/papirus-icon-theme/master/Papirus/22x22/apps/distributor-logo-ubuntu.svg "Ubuntu") [**Ubuntu**](https://ubuntu.com)
 
 O [**Ubuntu**](https://ubuntu.com) é uma distribuição baseada no [**Debian**](https://debian.org), que por ser uma das distribuições mais comentadas na internet, atrai a atenção de muitos usuários.
 
@@ -32,7 +32,7 @@ Neste guia eu vou utilizar o [**Kubuntu**](https://kubuntu.org), mas todos os co
 
 ![kubuntu-desktop](https://i.imgur.com/szZmW59.png "Área de trabalho do Kubuntu")
 
-## ![rtcqs](https://raw.githubusercontent.com/PapirusDevelopmentTeam/papirus-icon-theme/master/Papirus/32x32/emblems/emblem-default.svg "rtcqs") [rtcqs](https://codeberg.org/rtcqs/rtcqs)
+## ![rtcqs](https://raw.githubusercontent.com/PapirusDevelopmentTeam/papirus-icon-theme/master/Papirus/22x22/emblems/emblem-default.svg "rtcqs") [rtcqs](https://codeberg.org/rtcqs/rtcqs)
 
 O `rtcqs` é um checador de configurações do sistema, necessário pra checar se todas as configurações de desempenho já estão setadas corretamente, garantindo que o sistema tenha o máximo de desempenho possível com os programas de áudio.
 
@@ -66,7 +66,7 @@ systemctl --user mask xdg-desktop-portal
 sudo systemctl mask xdg-desktop-portal
 ```
     
-## ![udev-rtirq](https://raw.githubusercontent.com/PapirusDevelopmentTeam/papirus-icon-theme/master/Papirus/32x32/devices/audio-card.svg "udev-rtirq") [udev-rtirq](https://github.com/jhernberg/udev-rtirq)
+## ![udev-rtirq](https://raw.githubusercontent.com/PapirusDevelopmentTeam/papirus-icon-theme/master/Papirus/22x22/devices/audio-card.svg "udev-rtirq") [udev-rtirq](https://github.com/jhernberg/udev-rtirq)
 
 O `udev-rtirq` é um script que adiciona regras de gerenciamento de hardware ao sistema, que garantem alta prioridade no gerenciamento da interface de áudio.
 
@@ -77,7 +77,7 @@ cd udev-rtirq
 sudo make install
 ```
 
-## ![xanmod](https://raw.githubusercontent.com/PapirusDevelopmentTeam/papirus-icon-theme/master/Papirus/32x32/devices/cpu.svg "XanMod") [XanMod](https://xanmod.org)
+## ![xanmod](https://raw.githubusercontent.com/PapirusDevelopmentTeam/papirus-icon-theme/master/Papirus/22x22/devices/cpu.svg "XanMod") [XanMod](https://xanmod.org)
 
 O **XanMod** é o núcleo de sistema recomendado para este contexto, por conter uma série de patches e otimizações que contribuem para o melhor desempenho de programas que são executados através do [**WINE**](https://www.winehq.org/), além de contribuir de forma decisiva para uma baixíssma incidência de [`xruns`](https://unix.stackexchange.com/questions/199498/what-are-xruns)(que ocasionam artefatos sonoros, como clicks e pops no áudio) ao utilizar programas de áudio de baixa latência.
 
@@ -89,7 +89,7 @@ pkcon refresh
 pkcon install linux-firmware linux-xanmod
 ```
 
-## ![cadence](https://raw.githubusercontent.com/PapirusDevelopmentTeam/papirus-icon-theme/master/Papirus/32x32/apps/cadence.svg "Cadence") [Cadence](https://kx.studio/Applications:Cadence)
+## ![cadence](https://raw.githubusercontent.com/PapirusDevelopmentTeam/papirus-icon-theme/master/Papirus/22x22/apps/cadence.svg "Cadence") [Cadence](https://kx.studio/Applications:Cadence)
 
 O **Cadence** é o programa responsável por gerenciar todas configurações de som do sistema, utilizando como base os programas [**JACK**](https://jackaudio.org) e [**PulseAudio**](https://www.freedesktop.org/wiki/Software/PulseAudio).
 
@@ -116,7 +116,7 @@ pkcon install alsa-firmware cadence
 > Caso você tenha baixo desempenho ou artefatos sonoros, procure alterar o valor _Periods/Buffer_ na aba _Driver_, pela minha experiência, esse valor não tem um padrão claro, cada hardware precisa de um valor específico.
 {: .prompt-warning}
 
-## ![wine](https://raw.githubusercontent.com/PapirusDevelopmentTeam/papirus-icon-theme/master/Papirus/32x32/apps/wine.svg "WINE") [WINE TkG](https://github.com/Frogging-Family/wine-tkg-git)
+## ![wine](https://raw.githubusercontent.com/PapirusDevelopmentTeam/papirus-icon-theme/master/Papirus/22x22/apps/wine.svg "WINE") [WINE TkG](https://github.com/Frogging-Family/wine-tkg-git)
 
 O **WINE** é o programa responsável por disponibilizar uma camada de compatibilidade para a execução de programas do Windows no Linux, a versão **TkG** é compilada utilizando patches específicos para um maior desempenho, em especial o patch [**FSYNC**](https://www.phoronix.com/news/Linux-Kernel-Wine-Sync-API-2021).
 
@@ -133,7 +133,7 @@ pkcon install q4wine wine-tkg winetricks
 winetricks -f -q dxvk
 ```
 
-## ![yabridge](https://raw.githubusercontent.com/PapirusDevelopmentTeam/papirus-icon-theme/master/Papirus/32x32/apps/org.gnome.Extensions.svg "yabridge") [`yabrige`](https://github.com/robbert-vdh/yabridge)
+## ![yabridge](https://raw.githubusercontent.com/PapirusDevelopmentTeam/papirus-icon-theme/master/Papirus/22x22/apps/org.gnome.Extensions.svg "yabridge") [`yabrige`](https://github.com/robbert-vdh/yabridge)
 
 O `yabridge` é o programa responsável por criar links simbólicos dos plugins VST do Windows, que podem ser lidos pelos programas de áudio nativos do Linux, como **REAPER**, **Waveform**, **Bitwig**, entre outros.
 
@@ -154,7 +154,7 @@ yabridgectl add "$HOME"/.wine/drive_c/Program\ Files/VSTPlugins
 yabridgectl sync --prune --verbose
 ```
 
-## ![reaper](https://raw.githubusercontent.com/PapirusDevelopmentTeam/papirus-icon-theme/master/Papirus/32x32/apps/cockos-reaper.svg "REAPER") [REAPER](https://reaper.fm)
+## ![reaper](https://raw.githubusercontent.com/PapirusDevelopmentTeam/papirus-icon-theme/master/Papirus/22x22/apps/cockos-reaper.svg "REAPER") [REAPER](https://reaper.fm)
 
 O **REAPER** é uma estação de trabalho de áudio digital, com o qual você pode produzir música, editar áudio, editar vídeo (de maneira básica) e fazer apresentações musicais ao vivo.
 
@@ -179,14 +179,14 @@ wget -O "$HOME"/.config/REAPER/UserPlugins/reaper_reapack-x86_64.so "$(wget -qO-
 ```
 
 ## ![xruns](https://raw.githubusercontent.com/PapirusDevelopmentTeam/papirus-icon-theme/master/Papirus/48x48/status/notification-audio-volume-muted.svg "xruns"){: w="32"} Boas práticas para evitar `xruns`
-### ![wireless](https://raw.githubusercontent.com/PapirusDevelopmentTeam/papirus-icon-theme/master/Papirus/32x32/devices/network-wireless.svg "Wireless") Desative conexões sem fio(wifi e bluetooth)
+### ![wireless](https://raw.githubusercontent.com/PapirusDevelopmentTeam/papirus-icon-theme/master/Papirus/22x22/devices/network-wireless.svg "Wireless") Desative conexões sem fio(wifi e bluetooth)
 Conexões sem fio, sabidamente causam `xruns` esporádicos.
 
 Alguns notebooks tem um botão físico para desativar a conexão sem fio, se esse não for o seu caso, você pode desativar através do gerenciador de rede na área de notificação do seu ambiente gráfico.
 
 ![wifi](https://i.imgur.com/R443kiR.png "Conexão sem fio")
 
-### ![mediainfo](https://raw.githubusercontent.com/PapirusDevelopmentTeam/papirus-icon-theme/master/Papirus/32x32/apps/mkvinfo.svg "MediaInfo") Evite a conversão de arquivos de áudio em tempo real
+### ![mediainfo](https://raw.githubusercontent.com/PapirusDevelopmentTeam/papirus-icon-theme/master/Papirus/22x22/apps/mkvinfo.svg "MediaInfo") Evite a conversão de arquivos de áudio em tempo real
 
 Muitos programas de gravação de áudio, como é o caso do **REAPER**, por exemplo, permitem que você importe arquivos em formatos diferentes pra dentro do projeto, fazendo a conversão desses formatos em tempo real, durante a reprodução do projeto, isso gera uma sobrecarga de processamento e sabidamente pode causar `xruns`.
 
