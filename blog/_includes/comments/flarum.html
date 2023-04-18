@@ -1,1 +1,5 @@
-<iframe class="" width="100%" height="450" frameBorder="0" src="{{ site.comments.flarum.address }}/d/{{ page.flarum_id }}"></iframe>
+<!--<iframe class="" width="100%" height="450" frameBorder="0" src="{{ site.comments.flarum.address }}/d/{{ page.flarum_id }}"></iframe>-->
+<object data="{{ site.comments.flarum.address }}/d/{{ page.flarum_id }}" width="100%" height="450">
+    <embed src="{{ site.comments.flarum.address }}/d/{{ page.flarum_id }}" width="100%" height="450"> </embed>
+    Error: Embedded data could not be displayed.
+</object>
