@@ -5,6 +5,7 @@ categories: Distribuições
 tags: ubuntu respin rdx
 image:
   path: https://i.imgur.com/ERwWPOf.jpg
+flarum_id: 4
 ---
 
 ## ![respin-rdx](https://raw.githubusercontent.com/PapirusDevelopmentTeam/papirus-icon-theme/master/Papirus/22x22/apps/ubuntu-tweak.svg) Respin RDX

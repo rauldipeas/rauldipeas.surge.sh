@@ -5,6 +5,7 @@ categories: Guias
 tags: melhore o desempenho do ubuntu
 image:
   path: https://i.imgur.com/H2wF1U6.jpg
+flarum_id: 8
 ---
 
 ## ![ubuntu](https://raw.githubusercontent.com/PapirusDevelopmentTeam/papirus-icon-theme/master/Papirus/22x22/apps/distributor-logo-ubuntu.svg) Ubuntu

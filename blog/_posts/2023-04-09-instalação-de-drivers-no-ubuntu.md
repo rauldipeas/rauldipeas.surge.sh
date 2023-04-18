@@ -5,6 +5,7 @@ categories: Guias
 tags: instalação de drivers no ubuntu
 image:
   path: https://i.imgur.com/ATEyq8x.jpg
+flarum_id: 7
 ---
 
 Drivers são programas que determinam como seus dispositivos vão se comunicar com o restante do sistema, ou seja, são eles que determinam os melhores caminhos pra extrair o máximo possível de tudo que está na parte física do seu computador.

@@ -5,6 +5,7 @@ categories: Guias
 tags: instalação de programas autoatualizáveis
 image:
   path: https://i.imgur.com/T0yVwGI.jpg
+flarum_id: 5
 ---
 
 Na postagem sobre [Instalação de programas no Ubuntu](../instala%C3%A7%C3%A3o-de-programas-no-ubuntu), eu abordei vários métodos de instalação diferentes, porém, existe um método específico que não foi abordado, porque eu gostaria de fazer uma postagem específica sobre, com mais detalhes sobre o processo e suas possibilidades.
