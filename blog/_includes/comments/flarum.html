@@ -6,3 +6,21 @@
         <iframe width="100%" height="450" frameBorder="0" src="{{ site.comments.flarum.address }}/d/{{ page.flarum_id }}" style="border-radius: 10px;margin-top: 10px;"></iframe>
     </div>
 </div>
+<script type="text/javascript">
+    var iframeURL = '{{ site.comments.flarum.address }}/d/{{ page.flarum_id }}';
+    var iframeID = 'flarum-frame';
+
+    function loadIframe(){
+        //pre-authenticate
+        var req = new XMLHttpRequest();
+        req.open("POST",this.iframeURL, false, "username", "password"); //use POST to safely send combination
+        req.send(null); //here you can pass extra parameters through
+
+        //setiFrame's SRC attribute
+        var iFrameWin = document.getElementById(this.iframeID);
+        iFrameWin.src = this.iframeURL + "?extraParameters=true";
+    }
+
+    //onload, call loadIframe() function
+    loadIframe();   
+</script>
