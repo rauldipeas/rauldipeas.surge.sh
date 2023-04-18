@@ -28,7 +28,6 @@ A própria **Canonical**, empresa que desenvolve o Ubuntu, disponibiliza essa at
 O **mainline** pode ser instalado com os seguintes comandos:
 ```bash
 sudo add-apt-repository ppa:cappelikan/ppa
-pkcon refresh
 pkcon install mainline
 sudo mainline --install-latest
 ```
