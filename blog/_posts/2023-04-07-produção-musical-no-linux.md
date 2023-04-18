@@ -6,7 +6,7 @@ tags: produção musical no linux
 pin: true
 image:
   path: https://i.imgur.com/rr91QmQ.png
-flarum_id: 1
+flarum_id: 3
 ---
 ![ubuntu](https://raw.githubusercontent.com/PapirusDevelopmentTeam/papirus-icon-theme/master/Papirus/22x22/apps/distributor-logo-ubuntu.svg "Ubuntu"){: w="150" .normal}
 ![tuxguitar](https://raw.githubusercontent.com/PapirusDevelopmentTeam/papirus-icon-theme/master/Papirus/22x22/apps/tuxguitar.svg "TuxGuitar"){: w="150" .normal}
