@@ -10,18 +10,23 @@
   icon: 'fab fa-mastodon'   # icons powered by <https://fontawesome.com/>
   url:  'https://mastodon.social/@raul_dipeas'                  # Fill with your Mastodon account page, rel="me" will be applied for verification
 
-- type: email
-  icon: "fas fa-envelope"
-  noblank: true # open link in current tab
+- type: forum
+  icon: 'fas fa-life-ring'
+  url: 'https://rauldipeas.flarum.org'
 
 - type: rss
   icon: "fas fa-rss"
   noblank: true
+
 # Uncomment and complete the url below to enable more contact options
+#- type: email
+#  icon: "fas fa-envelope"
+#  noblank: true # open link in current tab
+
 # - type: linkedin
 #   icon: 'fab fa-linkedin'   # icons powered by <https://fontawesome.com/>
 #   url:  ''                  # Fill with your Linkedin homepage
-#
+
 # - type: stack-overflow
 #   icon: 'fab fa-stack-overflow'
 #   url:  ''                  # Fill with your stackoverflow homepage
