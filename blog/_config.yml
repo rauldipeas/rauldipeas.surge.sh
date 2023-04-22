@@ -92,8 +92,10 @@ avatar: https://raw.githubusercontent.com/rauldipeas/rauldipeas/main/avatar.gif
 toc: true
 
 comments:
-  active: flarum # The global switch for posts comments, e.g., 'disqus'.  Keep it empty means disable
+  active: telegram-comments # The global switch for posts comments, e.g., 'disqus'.  Keep it empty means disable
   # The active options are as follows:
+  telegram-comments:
+    data-comments-app-website: gExAcg-9
   flarum:
     address: https://rauldipeas.flarum.cloud
   disqus:
