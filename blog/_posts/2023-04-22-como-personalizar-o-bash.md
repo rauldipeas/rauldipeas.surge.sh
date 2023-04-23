@@ -5,7 +5,7 @@ categories: Guias
 tags: como personalizar o bash
 image:
   path: https://i.imgur.com/QsbX8ol.jpg
-flarum_id: 9
+flarum_id: 13
 ---
 
 O `bash` (Bourne Again SHell), é o interpretador de comandos mais comum nas distribuições Linux.
