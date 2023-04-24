@@ -40,6 +40,7 @@ Alguns extras estão inclusos:
 * ###### ![docklike](https://raw.githubusercontent.com/PapirusDevelopmentTeam/papirus-icon-theme/master/Papirus/22x22/apps/preferences-system-windows.svg) [**Docklike**](https://github.com/nsz32/docklike-plugin) (`superbar` para o painel do XFCE)
 * ###### ![appmenu](https://raw.githubusercontent.com/PapirusDevelopmentTeam/papirus-icon-theme/master/Papirus/22x22/apps/kmenuedit.svg) [**Vala Application Menu**](https://github.com/rilian-la-te/vala-panel-appmenu) (`appmenu` para o painel do XFCE)
 * ###### ![cpu-x](https://raw.githubusercontent.com/PapirusDevelopmentTeam/papirus-icon-theme/master/Papirus/22x22/apps/cpu-x.svg) [**CPU-X**](https://thetumultuousunicornofdarkness.github.io/CPU-X) (informações de hardware)
+* ###### ![telegram](https://raw.githubusercontent.com/PapirusDevelopmentTeam/papirus-icon-theme/master/Papirus/22x22/apps/telegram.svg) [**Telegram**](https://telegram.org) (mensageiro instantâneo)
 
 Os scripts usados nesta compilação, são derivados dos scripts desenvolvidos pelo [**Marcos Vallim**](https://github.com/mvallim/live-custom-ubuntu-from-scratch).
 
