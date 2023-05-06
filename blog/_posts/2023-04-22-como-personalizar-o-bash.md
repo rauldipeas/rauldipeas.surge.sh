@@ -92,7 +92,6 @@ Além do `fzf`, nós vamos instalar também o [`bat`](https://github.com/sharkdp
 
 Pra instalar o `fzf` e o `bat`  no **Ubuntu**, basta executar os comandos abaixo:
 ```bash
-# Instalação do bat e do fzf
 bash <(wget -qO- https://raw.githubusercontent.com/rauldipeas/apt-repository/main/apt-repository.sh)
 pkcon install bat fzf
 cat <<EOF |sudo tee /usr/local/bin/fzf-dir>/dev/null
@@ -132,7 +131,6 @@ O [`micro`](https://micro-editor.github.io) é um editor de texto para o termina
 
 Pra instalar o `micro` no **Ubuntu**, basta executar os comandos abaixo:
 ```bash
-# Instalação do micro
 bash <(wget -qO- https://raw.githubusercontent.com/rauldipeas/apt-repository/main/apt-repository.sh)
 pkcon install micro
 mkdir -p "$HOME"/.config/micro
