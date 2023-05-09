@@ -2,8 +2,6 @@
 layout: default
 ---
 
-{% include rssapp.html %}
-
 {% include assets-origin.html %}
 
 <div class="row">
@@ -11,6 +9,8 @@ layout: default
   <!-- core -->
   <div id="core-wrapper" class="col-12 col-lg-11 col-xl-9 pr-xl-4">
     <div class="post pl-1 pr-1 pl-md-2 pr-md-2">
+
+    {% include rssapp.html %}
 
     {% capture _content %}
       {% if layout.refactor or page.layout == 'page' %}
