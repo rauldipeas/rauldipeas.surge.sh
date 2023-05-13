@@ -1,0 +1,24 @@
+<!-- Page reactions widget -->
+<div id="metype-page-reactions-container" data-metype-account-id='{{ site.comments.metype.id }}' data-metype-host='https://www.metype.com/'>
+</div>
+<script>
+  talktype(function() {
+    const metypeReactionsContainer = document.getElementById("metype-page-reactions-container");
+    const page_url = metypeReactionsContainer.getAttribute("data-metype-page-url");
+    metypeReactionsContainer.setAttribute('data-metype-page-url', page_url || window.location.href);
+    talktype.pageReactionsIframe(metypeReactionsContainer);
+  })
+</script>
+
+<!-- Commenting widget -->
+<div id='metype-container' class='iframe-container' data-metype-account-id='{{ site.comments.metype.id }}' data-metype-host='https://www.metype.com/' data-metype-primary-color='#0000ff' data-metype-bg-color='#ffffff' data-metype-font-color='#4a4a4a'></div>
+<script type='text/javascript'>
+  var metypeContainer = document.getElementById("metype-container"),
+    page_url = metypeContainer.getAttribute("data-metype-page-url");
+  metypeContainer.setAttribute('data-metype-page-url', page_url || window.location.href);
+  metypeContainer.setAttribute('data-metype-window-height', window.innerHeight);
+  metypeContainer.setAttribute('data-metype-screen-width', window.screen.width);
+  talktype(function() {
+    talktype.commentWidgetIframe(metypeContainer);
+  });
+</script>
