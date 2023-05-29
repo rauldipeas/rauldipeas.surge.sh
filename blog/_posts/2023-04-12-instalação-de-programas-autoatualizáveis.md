@@ -37,7 +37,7 @@ Name=Firefox
 Comment=Navegue na internet
 GenericName=Navegador de internet
 Keywords=Internet;WWW;Browser;Web;Explorer
-Exec=firefox %u
+Exec=MOZ_USE_XINPUT2=1 firefox %u
 Terminal=false
 X-MultipleArgs=false
 Type=Application
@@ -88,7 +88,7 @@ Name=Thunderbird
 Comment=Envie e receba e-mails com o Thunderbird
 GenericName=Cliente de e-mail
 Keywords=Email;E-mail;Newsgroup;Feed;RSS
-Exec=thunderbird %u
+Exec=MOZ_USE_XINPUT2=1 thunderbird %u
 Terminal=false
 X-MultipleArgs=false
 Type=Application
