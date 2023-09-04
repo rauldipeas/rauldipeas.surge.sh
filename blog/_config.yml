@@ -92,7 +92,7 @@ avatar: https://raw.githubusercontent.com/rauldipeas/rauldipeas/main/avatar.gif
 toc: true
 
 comments:
-  active: flarum # The global switch for posts comments, e.g., 'disqus'.  Keep it empty means disable
+  active: # The global switch for posts comments, e.g., 'disqus'.  Keep it empty means disable
   # The active options are as follows:
   flarum:
     address: https://rauldipeas.flarum.cloud
