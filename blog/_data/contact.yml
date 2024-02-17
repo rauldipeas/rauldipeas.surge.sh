@@ -6,13 +6,13 @@
 - type: twitter
   icon: "fab fa-twitter"
 
-- type: mastodon
-  icon: 'fab fa-mastodon'                       # icons powered by <https://fontawesome.com/>
-  url:  'https://mastodon.social/@raul_dipeas'  # Fill with your Mastodon account page, rel="me" will be applied for verification
+#- type: mastodon
+#  icon: 'fab fa-mastodon'                       # icons powered by <https://fontawesome.com/>
+#  url:  'https://mastodon.social/@raul_dipeas'  # Fill with your Mastodon account page, rel="me" will be applied for verification
 
-- type: forum
-  icon: 'fas fa-life-ring'
-  url: 'https://rauldipeas.flarum.cloud'
+#- type: forum
+#  icon: 'fas fa-life-ring'
+#  url: 'https://rauldipeas.flarum.cloud'
 
 - type: rss
   icon: "fas fa-rss"
