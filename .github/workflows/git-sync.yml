@@ -7,4 +7,4 @@ jobs:
         - name: Conferência do repositório
           uses: actions/checkout@v3
         - name: Enviar para o Forgejo (Disroot)
-          run: git push . https://${{ secrets.FORGEJO_TOKEN }}git.disroot.org/rauldipeas/rauldipeas.surge.sh.git
+          run: git push . https://${{ secrets.FORGEJO_TOKEN }}@git.disroot.org/rauldipeas/rauldipeas.surge.sh.git
