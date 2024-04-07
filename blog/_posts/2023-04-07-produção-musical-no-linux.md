@@ -165,13 +165,13 @@ sed -i 's@wine/wine-mono/@'wine/wine-mono/"$WINE_MONO_VER"'@g' wine-mono.links
 wget -q --show-progress "$(cat<wine-mono.links|head -n1)"
 rm wine-mono.links
 sudo mkdir -p /opt/wine-tkg/share/wine/{gecko,mono}
-sudo tar fx wine-gecko-*-x86.tar.xz -C wine-tkg/opt/wine-tkg/share/wine/gecko/
-sudo tar fx wine-gecko-*-x86_64.tar.xz -C wine-tkg/opt/wine-tkg/share/wine/gecko/
-sudo tar fx wine-mono-*-x86.tar.xz -C wine-tkg/opt/wine-tkg/share/wine/mono/
+sudo tar fx wine-gecko-*-x86.tar.xz -C /opt/wine-tkg/share/wine/gecko/
+sudo tar fx wine-gecko-*-x86_64.tar.xz -C /opt/wine-tkg/share/wine/gecko/
+sudo tar fx wine-mono-*-x86.tar.xz -C /opt/wine-tkg/share/wine/mono/
 rm -r wine-gecko-*-x86.tar.xz
 rm -r wine-gecko-*-x86_64.tar.xz
 rm -r wine-mono-*-x86.tar.xz
-cat <<EOF |sudo tee /etc/X11/Xsession.d/99wine>/dev/null
+cat <<EOF |sudo tee /etc/environment.d/99wine.conf>/dev/null
 if [ -d "/opt/wine-tkg/bin" ] ; then
     PATH="/opt/wine-tkg/bin:\$PATH"
 fi
@@ -200,7 +200,7 @@ rm -r yabridge*.tar.gz
 sudo mv yabridge/yabridgectl /usr/bin/yabridgectl
 sudo mv yabridge/libyabridge* /usr/lib/
 sudo mv yabridge/yabridge* /usr/bin/
-rm -r yabridge/README.md yabridge/CHANGELOG.md
+rm -r yabridge
 ```
 
 🔧 Configuração
@@ -228,9 +228,9 @@ rm -rf /tmp/*reaper* /tmp/*libSwell*
 wget -q --show-progress http://reaper.fm/"$(wget -qO- http://reaper.fm/download.php|grep _linux_x86_64.tar.xz|cut -d '"' -f2)"
 tar fx reaper*_linux_x86_64.tar.xz -C /tmp
 sed -i 's/rmdir --/rm -rf --/g' /tmp/reaper*/install-reaper.sh
-/tmp/reaper*/install-reaper.sh --install /opt --integrate-desktop --quiet --integrate-sys-desktop
+sudo /tmp/reaper*/install-reaper.sh --install /opt --integrate-desktop --quiet --integrate-sys-desktop
 wget -qO libSwell.colortheme https://stash.reaper.fm/41334/libSwell.colortheme
-mv libSwell.colortheme /opt/REAPER/libSwell.colortheme
+sudo mv libSwell.colortheme /opt/REAPER/libSwell.colortheme
 cat <<EOF |tee -a /usr/share/applications/cockos-reaper.desktop 
 #\n
 Actions=NewProject;ShowAudioConfig;ReaMote;WhatsNew;License;
