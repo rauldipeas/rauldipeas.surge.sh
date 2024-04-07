@@ -43,7 +43,7 @@ As checagens indicadas se baseiam nas recomendações da [**Wiki do LinuxAudio**
 
 📦 Instalação
 ```bash
-pkcon install pipx python3-tk
+sudo apt install pipx python3-tk
 pipx install rtcqs
 mkdir -p "$HOME"/.local/share/{applications,icons}
 wget -qO "$HOME"/.local/share/applications/rtcqs.desktop https://github.com/autostatic/rtcqs/raw/main/rtcqs.desktop
@@ -73,9 +73,12 @@ O `udev-rtirq` é um script que adiciona regras de gerenciamento de hardware ao 
 
 📦 Instalação
 ```bash
+sudo apt install build-essential git
 git clone -q https://github.com/jhernberg/udev-rtirq
 cd udev-rtirq
 sudo make install
+cd ..
+rm -rfv udev-rtirq
 ```
 
 ## ![xanmod](https://raw.githubusercontent.com/PapirusDevelopmentTeam/papirus-icon-theme/master/Papirus/22x22/devices/cpu.svg "XanMod") [XanMod](https://xanmod.org)
@@ -84,10 +87,13 @@ O **XanMod** é o núcleo de sistema recomendado para este contexto, por conter 
 
 📦 Instalação
 ```bash
+wget -cq https://dl.xanmod.org/check_x86-64_psabi.sh
+chmod +x check_x86-64_psabi.sh
 wget -cq --show-progress https://dl.xanmod.org/xanmod-repository.deb
 sudo apt install --no-install-recommends ./xanmod-repository.deb
-pkcon refresh
-pkcon install linux-firmware linux-xanmod
+sudo apt update
+sudo apt install linux-firmware linux-xanmod-x64$(./check_x86-64_psabi.sh|cut -d"-" -f3)
+rm check_x86-64_psabi.sh xanmod-repository.deb
 ```
 
 ## ![cadence](https://raw.githubusercontent.com/PapirusDevelopmentTeam/papirus-icon-theme/master/Papirus/22x22/apps/cadence.svg "Cadence") [Cadence](https://kx.studio/Applications:Cadence)
@@ -99,11 +105,19 @@ Através das configurações indicadas aqui, seu sistema estará preparado pra e
 📦 Instalação
 ```bash
 wget -cq --show-progress http://ppa.launchpad.net/kxstudio-debian/kxstudio/ubuntu/pool/main/k/kxstudio-repos/"$(wget -qO- http://ppa.launchpad.net/kxstudio-debian/kxstudio/ubuntu/pool/main/k/kxstudio-repos/|grep all.deb|tail -n1|cut -d '"' -f8)"
-pkcon install-local ./kxstudio-repos*.deb
+sudo apt install ./kxstudio-repos*.deb
 sudo add-apt-repository -ny multiverse
 sudo add-apt-repository -y universe
 echo 'jackd2 jackd/tweak_rt_limits string true'|sudo debconf-set-selections
-pkcon install alsa-firmware cadence
+sudo apt install alsa-firmware cadence pulseaudio
+sudo apt autoremove --purge qjackctl meterbridge
+systemctl --user mask pipewire.service pipewire.socket
+systemctl --user --now stop pipewire.service pipewire.socket
+systemctl --user --now disable pipewire.service pipewire.socket
+systemctl --user --now enable pulseaudio.service pulseaudio.socket
+systemctl --user --now start pulseaudio.service pulseaudio.socket
+pactl info|grep "Nome do servidor"
+rm kxstudio-repos*.deb
 ```
     
 🔧 Configuração
@@ -125,8 +139,46 @@ O **WINE** é o programa responsável por disponibilizar uma camada de compatibi
 
 📦 Instalação
 ```bash
-bash <(wget -qO- https://raw.githubusercontent.com/rauldipeas/apt-repository/main/apt-repository.sh)
-pkcon install q4wine wine-tkg winetricks
+sudo dpkg --add-architecture i386
+sudo apt update
+sudo apt install q4wine wine wine32:i386 winetricks
+wget -q --show-progress "$(wget -qO- --header="X-Auth-Token: $GITHUB_TOKEN" https://api.github.com/repos/Kron4ek/Wine-Builds/releases|grep browser_download_url|grep staging-tkg-amd64.tar.xz|head -n1|cut -d '"' -f4)"
+tar fx wine*staging-tkg-amd64.tar.xz
+rm wine*staging-tkg-amd64.tar.xz
+sudo mv wine*staging-tkg-amd64 /opt/wine-tkg
+wget -q --show-progress "$(wget -qO- --header="X-Auth-Token: $GITHUB_TOKEN" https://api.github.com/repos/GloriousEggroll/wine-ge-custom/releases|grep browser_download_url|grep wine-lutris-ge|grep .tar.xz|head -n1|cut -d '"' -f4)"
+tar fx wine-lutris-ge*.tar.xz
+sudo cp lutris*/lib/wine/i386-windows/winemenubuilder.exe /opt/wine-tkg/lib/wine/i386-windows/winemenubuilder.exe
+sudo cp lutris*/lib64/wine/x86_64-windows/winemenubuilder.exe /opt/wine-tkg/lib/wine/x86_64-windows/winemenubuilder.exe
+find . -name "*lutris-ge*" -print0|xargs -0 rm -r
+WINE_GECKO_VER="$(wget -qO- https://dl.winehq.org/wine/wine-gecko/|grep folder|cut -d '"' -f6|sort -d|grep -v wine|tail -n1)"
+wget -qO- https://dl.winehq.org/wine/wine-gecko/"$WINE_GECKO_VER"|grep x86|grep tar|grep -wv pdb|grep -wv rc|cut -d '"' -f6>wine-gecko.links
+sed -i 's@wine-gecko@https://dl.winehq.org/wine/wine-gecko/wine-gecko@g' wine-gecko.links
+sed -i 's@wine/wine-gecko/@'wine/wine-gecko/"$WINE_GECKO_VER"'@g' wine-gecko.links
+wget -q --show-progress "$(cat<wine-gecko.links|head -n1)"
+wget -q --show-progress "$(cat<wine-gecko.links|tail -n1)"
+rm wine-gecko.links
+WINE_MONO_VER="$(wget -qO- https://dl.winehq.org/wine/wine-mono/|grep folder|cut -d '"' -f6|sort -g|tail -n1)"
+wget -qO- https://dl.winehq.org/wine/wine-mono/"$WINE_MONO_VER"|grep x86|grep tar|cut -d '"' -f6>wine-mono.links
+sed -i 's@wine-mono@https://dl.winehq.org/wine/wine-mono/wine-mono@g' wine-mono.links
+sed -i 's@wine/wine-mono/@'wine/wine-mono/"$WINE_MONO_VER"'@g' wine-mono.links
+wget -q --show-progress "$(cat<wine-mono.links|head -n1)"
+rm wine-mono.links
+sudo mkdir -p /opt/wine-tkg/share/wine/{gecko,mono}
+sudo tar fx wine-gecko-*-x86.tar.xz -C wine-tkg/opt/wine-tkg/share/wine/gecko/
+sudo tar fx wine-gecko-*-x86_64.tar.xz -C wine-tkg/opt/wine-tkg/share/wine/gecko/
+sudo tar fx wine-mono-*-x86.tar.xz -C wine-tkg/opt/wine-tkg/share/wine/mono/
+rm -r wine-gecko-*-x86.tar.xz
+rm -r wine-gecko-*-x86_64.tar.xz
+rm -r wine-mono-*-x86.tar.xz
+cat <<EOF |sudo tee /etc/X11/Xsession.d/99wine>/dev/null
+if [ -d "/opt/wine-tkg/bin" ] ; then
+    PATH="/opt/wine-tkg/bin:\$PATH"
+fi
+export WINE_ENABLE_PIPE_SYNC_FOR_APP=1
+export WINEESYNC=1
+export WINEFSYNC=1
+EOF
 ```
 
 🔧 Configuração
@@ -142,8 +194,13 @@ Ele é compatível com plugins **VST2** e **VST3** de **32** e **64** bits.
 
 📦 Instalação
 ```bash
-bash <(wget -qO- https://raw.githubusercontent.com/rauldipeas/apt-repository/main/apt-repository.sh)
-pkcon install yabridge
+wget -q --show-progress "$(wget -qO- --header="X-Auth-Token: $GITHUB_TOKEN" https://api.github.com/repos/robbert-vdh/yabridge/releases|grep browser_download_url|head -n2|tail -n1|cut -d '"' -f4)"
+tar fxz yabridge*.tar.gz
+rm -r yabridge*.tar.gz
+sudo mv yabridge/yabridgectl /usr/bin/yabridgectl
+sudo mv yabridge/libyabridge* /usr/lib/
+sudo mv yabridge/yabridge* /usr/bin/
+rm -r yabridge/README.md yabridge/CHANGELOG.md
 ```
 
 🔧 Configuração
@@ -165,8 +222,43 @@ Os comandos indicados aqui incluem a instalação do [**ReaPack**](https://reapa
 
 📦 Instalação
 ```bash
-bash <(wget -qO- https://raw.githubusercontent.com/rauldipeas/apt-repository/main/apt-repository.sh)
-pkcon install cockos-reaper
+REAPER_VER="$(wget -qO- http://reaper.fm| grep VERSION|cut -d '>' -f2|cut -d ':' -f1|sed 's/VERSION //g')"
+cd /tmp
+rm -rf /tmp/*reaper* /tmp/*libSwell*
+wget -q --show-progress http://reaper.fm/"$(wget -qO- http://reaper.fm/download.php|grep _linux_x86_64.tar.xz|cut -d '"' -f2)"
+tar fx reaper*_linux_x86_64.tar.xz -C /tmp
+sed -i 's/rmdir --/rm -rf --/g' /tmp/reaper*/install-reaper.sh
+/tmp/reaper*/install-reaper.sh --install /opt --integrate-desktop --quiet --integrate-sys-desktop
+wget -qO libSwell.colortheme https://stash.reaper.fm/41334/libSwell.colortheme
+mv libSwell.colortheme /opt/REAPER/libSwell.colortheme
+cat <<EOF |tee -a /usr/share/applications/cockos-reaper.desktop 
+#\n
+Actions=NewProject;ShowAudioConfig;ReaMote;WhatsNew;License;
+[Desktop Action NewProject]
+Name=REAPER (create new project)
+Name[pt_BR]=REAPER (criar novo projeto)
+Exec=/opt/REAPER/reaper -new
+Icon=cockos-reaper
+[Desktop Action ShowAudioConfig]
+Name=REAPER (show audio configuration on startup)
+Name[pt_BR]=REAPER (mostrar configurações de áudio ao iniciar)
+Exec=/opt/REAPER/reaper -audiocfg
+Icon=cockos-reaper
+[Desktop Action ReaMote]
+Name=ReaMote
+Exec=/opt/REAPER/reamote-server
+Icon=folder-remote
+[Desktop Action WhatsNew]
+Name=What's new
+Name[pt_BR]=O que há de novo?
+Exec=xdg-open /opt/REAPER/whatsnew.txt
+Icon=text-x-plain
+[Desktop Action License]
+Name=License and User Agreement
+Name[pt_BR]=Licença e contrato de usuário
+Exec=xdg-open /opt/REAPER/EULA.txt
+Icon=text-x-plain
+EOF
 ```
 
 🔧 Configuração
@@ -197,7 +289,7 @@ Para checar os formatos dos arquivos, você pode usar o programa [**MediaInfo**]
 
 📦 Instalação
 ```bash
-pkcon install mediainfo-gui
+sudo apt install mediainfo-gui
 ```
 
 ![mediainfo](https://i.imgur.com/hizh47U.png "MediaInfo")
@@ -208,7 +300,7 @@ Para converter os arquivos de áudio, vídeo e imagem em outros formatos, você 
 ```bash
 sudo apt-add-repository ppa:jeanslack/videomass
 sudo apt install --no-install-recommends yt-dlp
-pkcon install python3-videomass
+sudo apt install python3-videomass
 ```
 
 ![videomass](https://i.imgur.com/Mm7XAQg.png "Videomass")
