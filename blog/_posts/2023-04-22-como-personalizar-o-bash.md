@@ -48,7 +48,7 @@ A real necessidade para um complemento como esse, é que por padrão o `bash` n�
 Para instalar o `atuin` no **Ubuntu**, basta executar os comandos abaixo:
 ```bash
 bash <(wget -qO- https://raw.githubusercontent.com/rauldipeas/apt-repository/main/apt-repository.sh)
-pkcon install atuin
+sudo apt install atuin
 wget -qO- "$HOME"/.bashrc.d/bash-preexec.sh https://raw.githubusercontent.com/rcaloras/bash-preexec/master/bash-preexec.sh
 cat <<EOF |tee "$HOME"/.bashrc.d/atuin.bash>/dev/null
 [[ -f ~/.bashrc.d/bash-preexec.sh ]] && source ~/.bashrc.d/bash-preexec.sh
@@ -65,7 +65,7 @@ Se você faz um uso intenso do terminal, isso ajuda demais, pois poupa muito tem
 
 Para instalar o `ble.sh` no **Ubuntu**, basta executar os comandos abaixo:
 ```bash
-pkcon install build-essential git
+sudo apt install build-essential git
 git clone -q --recursive https://github.com/akinomyoga/ble.sh.git
 make -C ble.sh install PREFIX="$HOME"/.local>/dev/null
 cat <<EOF |tee "$HOME"/.bashrc.d/blesh.bash>/dev/null
@@ -93,7 +93,7 @@ Além do `fzf`, nós vamos instalar também o [`bat`](https://github.com/sharkdp
 Pra instalar o `fzf` e o `bat`  no **Ubuntu**, basta executar os comandos abaixo:
 ```bash
 bash <(wget -qO- https://raw.githubusercontent.com/rauldipeas/apt-repository/main/apt-repository.sh)
-pkcon install bat fzf
+sudo apt install bat fzf
 cat <<EOF |sudo tee /usr/local/bin/fzf-dir>/dev/null
 #!/bin/bash
 set -e
@@ -113,7 +113,7 @@ Com ele, além da visualização melhorada do nome do host, usuário e pasta atu
 Pra instalar o `liquidprompt` no **Ubuntu**, basta executar os comandos abaixo:
 ```bash
 bash <(wget -qO- https://raw.githubusercontent.com/rauldipeas/apt-repository/main/apt-repository.sh)
-pkcon install liquidprompt
+sudo apt install liquidprompt
 cp /usr/share/liquidprompt/liquidpromptrc-dist .config/liquidpromptrc
 sed -i 's/debian.theme/powerline.theme/g' "$HOME"/.config/liquidpromptrc
 cat <<EOF |"$HOME"/.bashrc.d/liquidprompt.bash>/dev/null
@@ -132,7 +132,7 @@ O [`micro`](https://micro-editor.github.io) é um editor de texto para o termina
 Pra instalar o `micro` no **Ubuntu**, basta executar os comandos abaixo:
 ```bash
 bash <(wget -qO- https://raw.githubusercontent.com/rauldipeas/apt-repository/main/apt-repository.sh)
-pkcon install micro
+sudo apt install micro
 mkdir -p "$HOME"/.config/micro
 cat <<EOF |tee "$HOME"/.config/micro/settings.json>/dev/null
 {
@@ -150,7 +150,7 @@ O [`ntfy`](https://github.com/dschep/ntfy) é um notificador para comandos demor
 
 Para instalar o `ntfy` no **Ubuntu**, basta executar os comandos abaixo:
 ```bash
-pkcon install libnotify-bin pipx
+sudo apt install libnotify-bin pipx
 pipx install --system-site-packages ntfy
 cat <<EOF |tee "$HOME"/.bashrc.d/ntfy.bash>/dev/null
 PATH="\$PATH":"\$HOME"/.local/bin

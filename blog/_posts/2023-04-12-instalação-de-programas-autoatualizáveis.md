@@ -168,7 +168,7 @@ Só vale ressaltar que é sempre bom conferir os pacotes disponíveis no reposit
 Finalmente, sem mais delongas, você pode instalar o **LibreOffice** atualizado no **Ubuntu** com os comandos abaixo:
 ```bash
 sudo add-apt-repository ppa:libreoffice/ppa
-pkcon update
+sudo apt update
 ```
 
 Se você gostou do conteúdo desta postagem e quer receber mais conteúdos como esse, me siga no [**Twitter**](https://twitter.com/rauldipeas).
