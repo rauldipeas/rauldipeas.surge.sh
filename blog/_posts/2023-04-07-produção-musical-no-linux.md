@@ -231,7 +231,7 @@ sed -i 's/rmdir --/rm -rf --/g' /tmp/reaper*/install-reaper.sh
 sudo /tmp/reaper*/install-reaper.sh --install /opt --integrate-desktop --quiet --integrate-sys-desktop
 wget -qO libSwell.colortheme https://stash.reaper.fm/41334/libSwell.colortheme
 sudo mv libSwell.colortheme /opt/REAPER/libSwell.colortheme
-cat <<EOF |tee -a /usr/share/applications/cockos-reaper.desktop 
+cat <<EOF |sudo tee -a /usr/share/applications/cockos-reaper.desktop 
 #\n
 Actions=NewProject;ShowAudioConfig;ReaMote;WhatsNew;License;
 [Desktop Action NewProject]
