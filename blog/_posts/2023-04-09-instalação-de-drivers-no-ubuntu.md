@@ -21,7 +21,7 @@ Por padrão, ele já está incluso no núcleo do Linux, porém, no caso do Ubunt
 Basta executar os comandos abaixo:
 ```bash
 sudo add-apt-repository ppa:kisak/kisak-mesa
-pkcon update
+sudo apt update
 ```
 Após a atualização, é necessário reiniciar o sistema para que os novos drivers entrem em funcionamento.
 
@@ -36,7 +36,7 @@ then
     echo 'Sua GPU é NVIDIA'
     (lspci |grep NVIDIA|cut -d: -f3|cut -d ' ' -f4|head -n1)
     sudo add-apt-repository ppa:graphics-drivers/ppa
-    pkcon install "$(apt search nvidia-driver 2>/dev/null|grep nvidia-driver|grep -v open|grep -v server|cut -d '/' -f1|tail -n1)"
+    sudo apt install "$(apt search nvidia-driver 2>/dev/null|grep nvidia-driver|grep -v open|grep -v server|cut -d '/' -f1|tail -n1)"
     cat <<EOF |sudo tee /usr/local/bin/prime-run>/dev/null
 #!/bin/sh
 set -e
@@ -60,7 +60,7 @@ Assim como o **MESA** abrange uma enorme quantidade de dispositivos de vídeo, o
 Porém, da mesma forma que o **MESA**, no caso do Ubuntu, pode ser que ele não esteja disponível na última versão, mas ele pode ser facilmente atualizado com o comando abaixo:
 ```bash
 wget -q --show-progress http://ppa.launchpad.net/kxstudio-debian/libs/ubuntu/pool/main/a/alsa-firmware/$(wget -qO- http://ppa.launchpad.net/kxstudio-debian/libs/ubuntu/pool/main/a/alsa-firmware/|grep amd64.deb|cut -d '"' -f8)
-pkcon install-local ./alsa-firmware*.deb
+sudo apt install ./alsa-firmware*.deb
 ```
 
 Após a atualização, é necessário reiniciar o sistema para que os novos drivers entrem em funcionamento.
