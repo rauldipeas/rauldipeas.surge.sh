@@ -47,8 +47,9 @@ A real necessidade para um complemento como esse, é que por padrão o `bash` n�
 
 Para instalar o `atuin` no **Ubuntu**, basta executar os comandos abaixo:
 ```bash
-bash <(wget -qO- https://raw.githubusercontent.com/rauldipeas/apt-repository/main/apt-repository.sh)
-sudo apt install atuin
+wget -cq --show-progress "$(wget -qO- https://api.github.com/repos/ellie/atuin/releases|grep browser_download_url|grep .deb|head -n1|cut -d '"' -f4)"
+sudo apt install ./atuin*.deb
+rm atuin*.deb
 wget -qO- "$HOME"/.bashrc.d/bash-preexec.sh https://raw.githubusercontent.com/rcaloras/bash-preexec/master/bash-preexec.sh
 cat <<EOF |tee "$HOME"/.bashrc.d/atuin.bash>/dev/null
 [[ -f ~/.bashrc.d/bash-preexec.sh ]] && source ~/.bashrc.d/bash-preexec.sh
@@ -92,8 +93,9 @@ Além do `fzf`, nós vamos instalar também o [`bat`](https://github.com/sharkdp
 
 Pra instalar o `fzf` e o `bat`  no **Ubuntu**, basta executar os comandos abaixo:
 ```bash
-bash <(wget -qO- https://raw.githubusercontent.com/rauldipeas/apt-repository/main/apt-repository.sh)
-sudo apt install bat fzf
+wget -q --show-progress "$(wget -qO- https://api.github.com/repos/sharkdp/bat/releases|grep browser_download_url|grep amd64.deb|grep -v musl|head -n1|cut -d '"' -f4)"
+sudo apt install ./bat*.deb fzf
+rm bat*.deb
 cat <<EOF |sudo tee /usr/local/bin/fzf-dir>/dev/null
 #!/bin/bash
 set -e
@@ -112,8 +114,9 @@ Com ele, além da visualização melhorada do nome do host, usuário e pasta atu
 
 Pra instalar o `liquidprompt` no **Ubuntu**, basta executar os comandos abaixo:
 ```bash
-bash <(wget -qO- https://raw.githubusercontent.com/rauldipeas/apt-repository/main/apt-repository.sh)
-sudo apt install liquidprompt
+wget -q --show-progress http://ftp.us.debian.org/debian/pool/main/l/liquidprompt/$(wget -qO- http://ftp.us.debian.org/debian/pool/main/l/liquidprompt/|grep all.deb|tail -n1|cut -d '"' -f8)
+sudo apt install ./liquidprompt*.deb
+rm liquidprompt*.deb
 cp /usr/share/liquidprompt/liquidpromptrc-dist .config/liquidpromptrc
 sed -i 's/debian.theme/powerline.theme/g' "$HOME"/.config/liquidpromptrc
 cat <<EOF |"$HOME"/.bashrc.d/liquidprompt.bash>/dev/null
@@ -131,8 +134,9 @@ O [`micro`](https://micro-editor.github.io) é um editor de texto para o termina
 
 Pra instalar o `micro` no **Ubuntu**, basta executar os comandos abaixo:
 ```bash
-bash <(wget -qO- https://raw.githubusercontent.com/rauldipeas/apt-repository/main/apt-repository.sh)
-sudo apt install micro
+wget -q --show-progress "$(wget -qO- https://api.github.com/repos/zyedidia/micro/releases|grep browser_download_url|grep amd64.deb|head -n1|cut -d '"' -f4)"
+sudo apt install ./micro*.deb
+rm micro*.deb
 mkdir -p "$HOME"/.config/micro
 cat <<EOF |tee "$HOME"/.config/micro/settings.json>/dev/null
 {
