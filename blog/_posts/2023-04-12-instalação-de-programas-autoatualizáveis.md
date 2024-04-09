@@ -169,6 +169,7 @@ Finalmente, sem mais delongas, você pode instalar o **LibreOffice** atualizado 
 ```bash
 sudo add-apt-repository ppa:libreoffice/ppa
 sudo apt update
+sudo apt upgrade
 ```
 
 Se você gostou do conteúdo desta postagem e quer receber mais conteúdos como esse, me siga no [**Twitter**](https://twitter.com/rauldipeas).
