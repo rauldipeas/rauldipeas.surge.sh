@@ -88,7 +88,7 @@ O [`udev-rtirq`](https://github.com/jhernberg/udev-rtirq) é um script que confi
 
 Para instalar o `udev-rtirq` basta executar os comandos abaixo:
 ```bash
-pkcon install build-essential git
+sudo apt install build-essential git
 git clone -q https://github.com/jhernberg/udev-rtirq
 cd udev-rtirq
 make install

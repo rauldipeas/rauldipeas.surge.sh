@@ -29,7 +29,7 @@ A própria **Canonical**, empresa que desenvolve o Ubuntu, disponibiliza essa at
 O **mainline** pode ser instalado com os seguintes comandos:
 ```bash
 sudo add-apt-repository ppa:cappelikan/ppa
-pkcon install mainline
+sudo apt install mainline
 sudo mainline --install-latest
 ```
 
@@ -90,7 +90,7 @@ O `nohang` garante que um espaço mínimo da memória esteja sempre disponível,
 
 Você pode instala-lo com o comando abaixo:
 ```bash
-pkcon install nohang
+sudo apt install nohang
 ```
 
 Não é necessário reiniciar, os efeitos são imediatos.

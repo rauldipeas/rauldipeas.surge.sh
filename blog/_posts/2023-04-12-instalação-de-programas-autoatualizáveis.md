@@ -136,7 +136,7 @@ Caso você esteja planejando usar o **Blender** para edição de vídeo, pode se
 
 Você pode instalar o **Audacity** e a [integração](https://github.com/tin2tin/audacity_tools_for_blender) com o **Blender** de forma simplificada, usando os comandos abaixo:
 ```bash
-pkcon install audacity
+sudo apt install audacity
 mkdir -p "$HOME"/.audacity-data/Theme
 wget -cO "$HOME"/.audacity-data/Theme/ImageCache.png https://github.com/visoart/audacity-themes/raw/master/themes/dark-blue/ImageCache.png
 wget -c https://github.com/tin2tin/audacity_tools_for_blender/archive/main.zip
