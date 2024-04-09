@@ -78,7 +78,7 @@ git clone -q https://github.com/jhernberg/udev-rtirq
 cd udev-rtirq
 sudo make install
 cd ..
-rm -rfv udev-rtirq
+rm -r udev-rtirq
 ```
 
 ## ![xanmod](https://raw.githubusercontent.com/PapirusDevelopmentTeam/papirus-icon-theme/master/Papirus/22x22/devices/cpu.svg "XanMod") [XanMod](https://xanmod.org)
