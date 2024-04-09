@@ -22,6 +22,7 @@ Basta executar os comandos abaixo:
 ```bash
 sudo add-apt-repository ppa:kisak/kisak-mesa
 sudo apt update
+sudo apt upgrade
 ```
 Após a atualização, é necessário reiniciar o sistema para que os novos drivers entrem em funcionamento.
 
