@@ -94,6 +94,7 @@ git clone -q https://github.com/jhernberg/udev-rtirq
 cd udev-rtirq
 make install
 cd ..
+rm -r udev-rtirq
 ```
 Após a atualização, é necessário reiniciar o sistema para que o novo gerenciamento entre em funcionamento.
 
