@@ -36,7 +36,7 @@ EOF
 
 O que nós fizemos até aqui, além de criar a pasta necessária, foi adicionar algumas linhas ao final do arquivo `"$HOME"/.bashrc`, para que ele busque por scripts com a extensão `.bash` dentro da pasta `"$HOME"/.bashrc.d`, até esse ponto, nenhuma modificação no comportamento do `bash` foi implementada, mas já estamos preparados pra elas.
 
-Ao longo de quase 2 décadas usando Linux, eu descobri uma série de melhorias que podem ser feitas no `bash` pra que ele se torne mais fácild e usar, afinal de contas, o terminal nunca é amistoso a primeira vista e quanto mais nós pudermos mitigar essa estranhesa, melhor, não?
+Ao longo de quase 2 décadas usando Linux, eu descobri uma série de melhorias que podem ser feitas no `bash` pra que ele se torne mais fácil de usar, afinal de contas, o terminal nunca é amistoso a primeira vista e quanto mais nós pudermos mitigar essa estranhesa, melhor, não?
 
 ## `atuin`
 ![atuin](https://github.com/ellie/atuin/raw/main/demo.gif)
