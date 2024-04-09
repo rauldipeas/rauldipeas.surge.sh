@@ -54,10 +54,10 @@ wget -qO "$HOME"/.local/share/icons/rtcqs.svg https://github.com/autostatic/rtcq
 🔧 Configuração
 ```bash
 sudo usermod -aG audio "$USER"
-cat <<EOF |sudo tee /etc/sysctl.d/swappiness.conf >/dev/null
+cat <<EOF |sudo tee /etc/sysctl.d/swappiness.conf>/dev/null
 vm.swappiness = 10
 EOF
-cat <<EOF |sudo tee /etc/default/grub.d/cmdline-linux-default.cfg >/dev/null
+cat <<EOF |sudo tee /etc/default/grub.d/cmdline-linux-default.cfg>/dev/null
 GRUB_CMDLINE_LINUX_DEFAULT="cpufreq.default_governor=performance mitigations=off preempt=full quiet splash threadirqs"
 EOF
 sudo update-grub
@@ -231,7 +231,8 @@ sed -i 's/rmdir --/rm -rf --/g' /tmp/reaper*/install-reaper.sh
 sudo /tmp/reaper*/install-reaper.sh --install /opt --integrate-desktop --quiet --integrate-sys-desktop
 wget -qO libSwell.colortheme https://stash.reaper.fm/41334/libSwell.colortheme
 sudo mv libSwell.colortheme /opt/REAPER/libSwell.colortheme
-cat <<EOF |sudo tee -a /usr/share/applications/cockos-reaper.desktop 
+cd ..
+cat <<EOF |sudo tee -a /usr/share/applications/cockos-reaper.desktop>/dev/null
 #\n
 Actions=NewProject;ShowAudioConfig;ReaMote;WhatsNew;License;
 [Desktop Action NewProject]
