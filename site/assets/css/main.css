@@ -569,11 +569,11 @@ input, select, textarea {
 				transform: translate3d(0,0,0);
 				display: inline-block;
 				height: 5.35em;
-				line-height: 5.885em;
+				/* line-height: 5.885em; */
 				opacity: 0;
 				position: relative;
 				top: 0;
-				width: 3.84em;
+				width: 5.5em;
 			}
 
 				#header nav li:nth-child(1) {
@@ -1082,7 +1082,7 @@ input, select, textarea {
 }
 
 .blob {
-	border-radius: 35%;
+	border-radius: 50%;
 	box-shadow: 0 0 0 0 rgba(255, 255, 255, 1);
 	transform: scale(1);
 	animation: pulse 0.7s infinite;
