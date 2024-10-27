@@ -92,7 +92,7 @@ avatar: https://raw.githubusercontent.com/rauldipeas/rauldipeas/main/avatar.gif
 toc: true
 
 comments:
-  active: # The global switch for posts comments, e.g., 'disqus'.  Keep it empty means disable
+  active: giscus # The global switch for posts comments, e.g., 'disqus'.  Keep it empty means disable
   # The active options are as follows:
   flarum:
     address: # https://rauldipeas.flarum.cloud
@@ -108,8 +108,8 @@ comments:
   giscus:
     repo: rauldipeas/rauldipeas.surge.sh
     repo_id: R_kgDOHj8UGw
-    category: General
-    category_id: DIC_kwDOHj8UG84CVwgX
+    category: Comentários do blog
+    category_id: DIC_kwDOHj8UG84CjvAJ
     mapping: title
     input_position: top
     lang: pt
