@@ -1,7 +1,8 @@
 #  The contact options.
 
-# - type: github
-#   icon: "fab fa-github"
+- type: github
+  icon: "fab fa-github"
+  url: 'https://github.com/rauldipeas'
 
 #- type: twitter
 #  icon: "fab fa-twitter"

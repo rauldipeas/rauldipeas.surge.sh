@@ -2,6 +2,10 @@
 #  Icons from <https://fontawesome.com/>
 
 platforms:
+  - type:
+    icon: "fab fa-mastodon"
+    link: "https://mastodonshare.com/?text=TILE&url=URL"
+
   - type: Twitter
     icon: "fab fa-twitter"
     link: "https://twitter.com/intent/tweet?text=TITLE&url=URL"
