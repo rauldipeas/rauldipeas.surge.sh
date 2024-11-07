@@ -4,7 +4,7 @@
 platforms:
   - type:
     icon: "fab fa-mastodon"
-    link: "https://tootpick.org/#text=TITLE%20%https://rauldipeas.surge.shURL"
+    link: "https://tootpick.org/#text=TITLE%20https://rauldipeas.surge.shURL"
 
   - type: Twitter
     icon: "fab fa-twitter"
