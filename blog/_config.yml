@@ -32,16 +32,16 @@ github:
   username: rauldipeas # change to your github username
 
 twitter:
-  username: rauldipeas # change to your twitter username
+  username: # change to your twitter username
 
 social:
   # Change to your full name.
   # It will be displayed as the default author of the posts and the copyright owner in the Footer
   name: Raul Dipeas
-  email: rauldipeas@disroot.com # change to your email address
+  email: # change to your email address
   links:
     # The first element serves as the copyright owner's link
-    - https://twitter.com/rauldipeas # change to your twitter homepage
+    # - # change to your twitter homepage
     - https://github.com/rauldipeas # change to your github homepage
     # Uncomment below to add more social links
     # - https://www.facebook.com/username
@@ -94,19 +94,11 @@ toc: true
 comments:
   active: giscus # The global switch for posts comments, e.g., 'disqus'.  Keep it empty means disable
   # The active options are as follows:
-  flarum:
-    address: # https://rauldipeas.flarum.cloud
-  metype:
-    id: 1000432
   disqus:
     shortname: # fill with the Disqus shortname. › https://help.disqus.com/en/articles/1717111-what-s-a-shortname
-  # utterances settings › https://utteranc.es/
-  utterances:
-    repo: # <gh-username>/<repo>
-    issue_term: # < url | pathname | title | ...>
   # Giscus options › https://giscus.app
   giscus:
-    repo: rauldipeas/rauldipeas.surge.sh
+    repo: rauldipeas/rauldipeas
     repo_id: R_kgDOHj8UGw
     category: Comentários do blog
     category_id: DIC_kwDOHj8UG84CjvAJ
