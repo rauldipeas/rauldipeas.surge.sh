@@ -18,7 +18,8 @@ jobs:
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          command: pages deploy site --project-name=rauldipeas
+          command: pages deploy site --project-name=rauldipeas --commit-dirty=true
+          quiet: true
       - name: Envio para o Surge
         uses: dswistowski/surge-sh-action@v1
         with:
