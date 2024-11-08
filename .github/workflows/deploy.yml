@@ -27,14 +27,6 @@ jobs:
           project: 'site'
           login: ${{ secrets.SURGE_LOGIN }}
           token: ${{ secrets.SURGE_TOKEN }}
-      - name: Envio para o GitHub Pages
-        uses: rdarida/simple-github-pages-deploy-action@v1
-        with:
-          git-user: 'rauldipeas'
-          git-email: 'github.rauldipeas@lock.email'
-          git-base-folder: 'site'
-          commit-message: '^github-pages'
-          branch: 'gh-pages'
       - uses: otto-de/purge-deprecated-workflow-runs@v2
         with:
           remove-cancelled: true
