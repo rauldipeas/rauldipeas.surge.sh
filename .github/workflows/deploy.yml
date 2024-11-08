@@ -13,6 +13,12 @@ jobs:
         run: bundle exec jekyll build -s blog -d site/blog
         env:
           JEKYLL_ENV: production
+      - name: Envio para o Cloudflare Pages
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          command: pages deploy site --project-name=rauldipeas
       - name: Envio para o Surge
         uses: dswistowski/surge-sh-action@v1
         with:
@@ -24,6 +30,6 @@ jobs:
         with:
           remove-cancelled: true
           remove-failed: true
-          remove-obsolete: false
+          remove-obsolete: true
           token: ${{ secrets.PAT }}
           #remove-older-than: 7d
