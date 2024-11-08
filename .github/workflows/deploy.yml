@@ -1,4 +1,4 @@
-name: Implantação no Surge
+name: Implantação
 on: push
 jobs:
   deploy:
