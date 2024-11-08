@@ -1,7 +1,7 @@
 name: Implantação
 on: push
 jobs:
-  build:
+  deploy:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -10,28 +10,9 @@ jobs:
         with:
           bundler-cache: true
       - name: Compilação do Jekyll
-        id: build
         run: bundle exec jekyll build -s blog -d site/blog
         env:
           JEKYLL_ENV: production
-      - name: Envio dos arquivos estáticos como artefatos
-        id: deployment
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: site
-  deploy:
-    permissions:
-      pages: write
-      id-token: write
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
-    needs: build
-    steps:
-      - name: Envio para o GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
       - name: Envio para o Cloudflare Pages
         uses: cloudflare/wrangler-action@v3
         with:
@@ -45,7 +26,15 @@ jobs:
           domain: 'rauldipeas.surge.sh'
           project: 'site'
           login: ${{ secrets.SURGE_LOGIN }}
-          token: ${{ secrets.SURGE_TOKEN }}        
+          token: ${{ secrets.SURGE_TOKEN }}
+      - name: Envio para o GitHub Pages
+        uses: rdarida/simple-github-pages-deploy-action@v1
+        with:
+          git-user: 'rauldipeas'
+          git-email: 'github.rauldipeas@lock.email'
+          git-base-folder: 'site'
+          commit-message: '^github-pages'
+          branch: 'gh-pages'
       - uses: otto-de/purge-deprecated-workflow-runs@v2
         with:
           remove-cancelled: true
