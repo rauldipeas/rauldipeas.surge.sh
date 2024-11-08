@@ -10,7 +10,7 @@
 
 ![github](https://img.shields.io/github/followers/rauldipeas?label=GitHub&logo=github&style=for-the-badge) ![mastodon](https://img.shields.io/mastodon/follow/001202480?color=6263fd&domain=https%3A%2F%2Fmastodon.social&label=Mastodon&logo=mastodon&style=for-the-badge)
 
-![](https://github-readme-stats.vercel.app/api?username=rauldipeas&show_icons=true&theme=transparent&hide_border=true&hide_title=true&locale=pt-br)
+![](https://github-readme-stats.vercel.app/api?username=rauldipeas&include_all_commits=true&show_icons=true&theme=transparent&hide_border=true&hide_title=true&locale=pt-br)
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://github.com/rauldipeas/rauldipeas/blob/snake/snake-dark.svg"/>
