@@ -1,7 +1,7 @@
 name: Implantação
 on: push
 jobs:
-  build:
+  deploy:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -12,10 +12,6 @@ jobs:
         run: bundle exec jekyll build -s blog -d site/blog
         env:
           JEKYLL_ENV: production
-  deploy:
-    runs-on: ubuntu-latest
-    needs: build
-    steps:
       - name: Envio para o Cloudflare Pages
         uses: cloudflare/wrangler-action@v3
         with:
