@@ -1,0 +1,56 @@
+==================================================================
+https://keybase.io/rauldipeas_wkb
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://rauldipeas.pages.dev
+  * I am rauldipeas_wkb (https://keybase.io/rauldipeas_wkb) on keybase.
+  * I have a public key ASBxITLraO8pKPBn1VrFyYWqpS_YI_ZYFeH6mjDmUASJQAo
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "0120bc283bd030dc1ecd70e1dcb10cbf83efe773642c8e400173da7459c2878ae5a60a",
+      "host": "keybase.io",
+      "kid": "0120712132eb68ef2928f067d55ac5c985aaa52fd823f65815e1fa9a30e6500489400a",
+      "uid": "5ecf57728265c4f999501ecc92878c19",
+      "username": "rauldipeas_wkb"
+    },
+    "merkle_root": {
+      "ctime": 1731117758,
+      "hash": "527e34476502c48ac9623322f118226d0b7d2b91e7ad2a6dd690b3a9d521eaa89e690b056a96e6f6036c777395acd3bbe943ad9d96e25b6518796021473fda68",
+      "hash_meta": "9c2cabc3fc6207b4177ddaf62df61e23315d84c32c85c467522edea790ed7026",
+      "seqno": 26282397
+    },
+    "service": {
+      "entropy": "PwffKOFlPv7DGCQ3/tGHOgEN",
+      "hostname": "rauldipeas.pages.dev",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 2
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "6.4.0"
+  },
+  "ctime": 1731117875,
+  "expire_in": 504576000,
+  "prev": "c97c853117451bc39b7b97d07d84285abf3f4489bdea2d6da01a58fa5391322d",
+  "seqno": 13,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgcSEy62jvKSjwZ9VaxcmFqqUv2CP2WBXh+pow5lAEiUAKp3BheWxvYWTESpcCDcQgyXyFMRdFG8Obe5fQfYQoWr8/RIm96i1toBpY+lORMi3EINUfiQY0JDUwoO00fLHgSR9nKqaEkLuOtktu+xMUV/h7AgHCo3NpZ8RA7DGdvntn38IDPJMXGbHHGwNh5vJFaiKgVdiT1wFFYgo7mDBXEM/MXWklpiKbEiFQDw7WEW0c5cKPmbtp6cKuBKhzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEIN633FmbuhnUh54rqaJTVVoX7B54eXxmYPqW6w/blUYQo3RhZ80CAqd2ZXJzaW9uAQ==
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/rauldipeas_wkb
+
+==================================================================
