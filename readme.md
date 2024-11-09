@@ -6,7 +6,7 @@
  |_| \_\__,_|\__,_|_| |____/|_| .__/ \___|\__,_|___/
                               |_|
 ```
-[![](avatar.gif)](https://rauldipeas.surge.sh)
+[![](avatar.gif)](https://rauldipeas.pages.dev)
 
 ![github](https://img.shields.io/github/followers/rauldipeas?label=GitHub&logo=github&style=for-the-badge) ![mastodon](https://img.shields.io/mastodon/follow/001202480?color=6263fd&domain=https%3A%2F%2Fmastodon.social&label=Mastodon&logo=mastodon&style=for-the-badge)
 
