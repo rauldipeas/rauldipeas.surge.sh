@@ -16,7 +16,7 @@ jobs:
       - name: Envio para o GitHub Pages
         uses: dmnemec/copy_file_to_another_repo_action@main
         env:
-          API_TOKEN_GITHUB: ${{ secrets.GITHUB_TOKEN }}
+          API_TOKEN_GITHUB: ${{ secrets.PAT }}
         with:
           source_file: 'site'
           destination_repo: 'rauldipeas/rauldipeas.github.io'
