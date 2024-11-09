@@ -22,7 +22,6 @@ jobs:
           destination_repo: 'rauldipeas/rauldipeas.github.io'
           destination_folder: '/'
           destination_branch_create: 'gh-pages'
-          destination_branch: 'gh-pages'
           user_email: 'github.rauldipeas@lock.email'
           user_name: 'rauldipeas'
           commit_message: '^site'
