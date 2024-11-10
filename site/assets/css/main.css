@@ -1082,7 +1082,7 @@ input, select, textarea {
 }
 
 .blob {
-	border-radius: 50%;
+	border-radius: 35%;
 	box-shadow: 0 0 0 0 rgba(255, 255, 255, 1);
 	transform: scale(1);
 	animation: pulse 0.7s infinite;
@@ -1104,7 +1104,7 @@ input, select, textarea {
 .links-svg {
 	filter: drop-shadow(0px 3px 3px rgba(0, 0, 0, 1));
 	width: 64px;
-	transition: transform .1s;
+	transition: transform .2s;
 	filter: brightness(90%);
 }
 .links-svg:hover {
@@ -1114,126 +1114,13 @@ input, select, textarea {
 @media all and (max-width: 950px) {
 	.links-svg {
 		width: 56px;
-		transition: transform .1s ease;
+		transition: transform .2s ease;
 		filter: brightness(100%);
 	}
 	.links-svg:hover {
-		transform: scale(1.2) rotate(0);
+		transform: scale(1.2) rotate(8deg);
 		filter: brightness(100%);
 	};
-}
-.chat {
-  	position:fixed;
-  	width:70px;
-  	height:70px;
-  	bottom:15px;
-  	right:15px;
-  	text-align:center;
-  	z-index:100;
-  	animation: pulse 0.65s infinite;
-}
-.chat:hover {
-  	animation: shadow-pulse 1s;
-}
-.chat:active {
-	animation: pulse 0.2s;
-}
-@keyframes shadow-pulse {
-	0% {
-		background-color: #0F9D58;
-		box-shadow: 0 0 0 0px #0F9D58;
-	}
-	100% {
-		box-shadow: 0 0 0 15px #0F9D58;
-	}
-}
-/* @keyframes pulse {
-	0% {
-		padding: 2px;
-	}
-	100% {
-		padding: 6px;
-	}
-}*/
-.youtube {
-	position:fixed;
-	top:1.8%;
-	right:1%;
-	text-align:center;
-	z-index:100;
-}
-@media all and (max-width: 950px) {
-	.youtube {display:none;};
-}
-/* @media all and (max-height: 850px) {
-	.twitch {display:none;};
-} */
-.stream-badge {
-	position:fixed;
-	top:1.8%;
-	right:1%;
-	width: 128px;
-	text-align:center;
-	z-index:100;
-}
-@media all and (min-width: 950px) {
-	.stream-badge {display:none;};
-}
-iframe {
-	border-radius: 10px;
-}
-@media all and (max-width: 950px) {
-	.crisp-client {display:none;};
-}
-
-/*
-.venom-button .venom-button-popup {
-	background-color:#202c33 !important;
-}
-
-.venom-button .venom-button-popup .ewIAEB {
-	background-color: #0b141a !important;
-}
-
-.venom-button .venom-button-popup .cWUfUj .dSUAOZ {
-	background-color: #202c33 !important;
-	color: white !important;
-}
-
-.venom-button .venom-button-popup .cWUfUj .dSUAOZ .acKCA, .hOnFlx, .dPhWdq {
-	background-color: #202c33 !important;
-	color: white !important;
-}
-
-.venom-button .venom-button-popup .hOnFlx, .ioFWLq, .hDGnqR, .acKCA, .dPhWdq {
-	text-transform: none;
-	text-shadow: none;
-}
-
-.venom-button .venom-button-popup svg {
-	filter: invert()
-}
-
-.venom-button .venom-button-input-message {
-	background-color: #202c33 !important;
-	text-shadow: none;
-}
-
-.venom-button .venom-button-input-message textarea {
-	background-color: #2a3942;
-	text-shadow: none;
-	border: 0px !important;
-}
-*/
-
-.venom-button .venom-button-popup .hOnFlx, .ioFWLq, .hDGnqR, .acKCA, .dPhWdq {
-	text-transform: none;
-	text-shadow: none;
-}
-
-.venom-button .venom-button-input-message textarea {
-	color: black;
-	text-shadow: none;
 }
 
 .topnav {
