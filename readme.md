@@ -1,7 +1,7 @@
 <img src="https://readme-typing-svg.herokuapp.com/?font=Quicksand&size=128&center=true&vCenter=true&width=1024&height=128&duration=6000&lines=Raul+Dipeas">
 
 <div align="center">
-  <a href=https://rauldipeas.pages.dev target="_blank"><img src="./avatar.gif">
+  <a href=https://rauldipeas.pages.dev target="_blank"><img src="https://github.com/rauldipeas/rauldipeas/raw/main/avatar.gif">
 
   <img src="https://img.shields.io/github/followers/rauldipeas?label=GitHub&logo=github&style=for-the-badge">
   <img src="https://img.shields.io/mastodon/follow/001202480?color=6263fd&domain=https%3A%2F%2Fmastodon.social&label=Mastodon&logo=mastodon&style=for-the-badge">
