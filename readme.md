@@ -1,4 +1,4 @@
-<img src="https://readme-typing-svg.herokuapp.com/?font=Quicksand&size=96&center=true&vCenter=true&width=1024&height=96&duration=6000&lines=Raul+Dipeas">
+<img src="https://readme-typing-svg.herokuapp.com/?font=Quicksand&size=72&center=true&vCenter=true&width=1024&height=72&duration=6000&lines=Raul+Dipeas">
 
 <div align="center">
   <a href=https://rauldipeas.pages.dev target="_blank"><img src="avatar.gif"></a>
