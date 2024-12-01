@@ -20,6 +20,6 @@
     <img src="https://github.com/rauldipeas/rauldipeas/blob/snake/snake.svg">
   </picture>
   <p>Fale comigo no <a href="keybase://chat/rauldipeas_wkb"><strong>Keybase</strong><a></p>
-  <img src="https://keybase.io/images/blog/teams/teams-splash-announcement.png">
+  <img src="https://keybase.io/images/blog/teams/teams-splash-announcement.png" width="800px">
   <p>O <strong>Keybase</strong> é uma plataforma que combina comunicação segura, gerenciamento de identidades digitais e compartilhamento de arquivos com criptografia de ponta a ponta. Ele garante que todas as mensagens e arquivos sejam protegidos contra interceptações, oferecendo privacidade e segurança. Usar um chat criptografado é essencial para proteger dados sensíveis, preservar a confidencialidade e evitar acessos não autorizados, especialmente em um mundo cada vez mais conectado e vulnerável a ataques cibernéticos.</p>
 </div>
