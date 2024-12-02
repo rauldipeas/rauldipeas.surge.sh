@@ -3,6 +3,10 @@
 <div align="center">
   <a href=https://rauldipeas.pages.dev><img src="avatar.gif"></a>
   </br>
+  <a href="https://dev.to/rauldipeas"><img src="https://img.shields.io/badge/dev.to-0A0A0A?logo=devdotto&logoColor=fff&style=for-the-badge"></a>
+  <a href="https://bandlab.com/rauldipeas"><img src="https://img.shields.io/badge/BandLab-F12C18?logo=bandlab&logoColor=fff&style=for-the-badge"></a>
+  <a href="https://trakt.tv/users/rauldipeas"><img src="https://img.shields.io/badge/Trakt-ED1C24?logo=trakt&logoColor=fff&style=for-the-badge"></a>
+  </br>
   <a href="https://phanpy.social/#/mastodon.social/a/1202480?media=1"><img src="https://img.shields.io/mastodon/follow/001202480?color=6263fd&domain=https%3A%2F%2Fmastodon.social&label=Mastodon&logo=mastodon&style=for-the-badge"></a>
   <a href="https://youtube.com/rauldipeas"><img src="https://img.shields.io/youtube/channel/subscribers/UCDujDO27n_ItUi_mPDXEZpQ?logoColor=red&=label=YouTuhe&logo=youtube&style=for-the-badge"></a>
   </br>
@@ -20,7 +24,8 @@
     <img src="https://github.com/rauldipeas/rauldipeas/blob/snake/snake.svg">
   </picture>
   </br>
-  <p>Fale comigo no <a href="keybase://chat/rauldipeas_wkb"><strong>Keybase</strong></a></p>
+  </br>
+  <h1>Fale comigo no <a href="keybase://chat/rauldipeas_wkb"><strong>Keybase</strong></a></h1>
   <img src="https://keybase.io/images/blog/teams/teams-splash-announcement.png" width="600px">
   <p>O <strong>Keybase</strong> é uma plataforma que combina comunicação segura, gerenciamento de identidades digitais e compartilhamento de arquivos com criptografia de ponta a ponta. Ele garante que todas as mensagens e arquivos sejam protegidos contra interceptações, oferecendo privacidade e segurança. Usar um chat criptografado é essencial para proteger dados sensíveis, preservar a confidencialidade e evitar acessos não autorizados, especialmente em um mundo cada vez mais conectado e vulnerável a ataques cibernéticos.</p>
 </div>
