@@ -12,8 +12,8 @@
   </br>
   <a href="https://respin-rdx.sourceforge.io"><img src="https://raw.githubusercontent.com/PapirusDevelopmentTeam/papirus-icon-theme/master/Papirus/64x64/apps/tux.svg"></a>
   <a href="https://rauldipeas.substack.com"><img src="https://raw.githubusercontent.com/PapirusDevelopmentTeam/papirus-icon-theme/master/Papirus/64x64/apps/fbreader.svg"></a>
-  <a href="https://phanpy.social/#/mastodon.social/a/1202480?media=1"><img src="https://raw.githubusercontent.com/PapirusDevelopmentTeam/papirus-icon-theme/master/Papirus/64x64/apps/mstdn.svg" class="links-svg blob"></a>
-  <a href="https://keybase.io/rauldipeas_wkb"><img src="https://raw.githubusercontent.com/PapirusDevelopmentTeam/papirus-icon-theme/master/Papirus/64x64/apps/keybase.svg"></a>
+  <a href="https://phanpy.social/#/mastodon.social/a/1202480?media=1"><img src="https://raw.githubusercontent.com/PapirusDevelopmentTeam/papirus-icon-theme/master/Papirus/64x64/apps/mstdn.svg"></a>
+  <a href="https://account.wire.com/user-profile/?id=6efdfd85-a846-415b-8ce9-a903b469e869"><img src="https://raw.githubusercontent.com/PapirusDevelopmentTeam/papirus-icon-theme/master/Papirus/64x64/apps/wire.svg"></a>
   <a href="https://youtube.com/rauldipeas"><img src="https://raw.githubusercontent.com/PapirusDevelopmentTeam/papirus-icon-theme/master/Papirus/64x64/apps/youtube.svg"></a>
   </br>
   <img src="https://github-readme-stats.vercel.app/api?username=rauldipeas&include_all_commits=true&show_icons=true&theme=transparent&hide_border=true&hide_title=true&locale=pt-br">
