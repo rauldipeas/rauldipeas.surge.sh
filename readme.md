@@ -1,7 +1,7 @@
 <img src="https://readme-typing-svg.herokuapp.com/?font=Quicksand&size=72&center=true&vCenter=true&width=1024&height=72&duration=6000&lines=Raul+Dipeas">
 
 <div align="center">
-  <a href=https://rauldipeas.pages.dev><img src="avatar.gif"></a>
+  <a href=https://rauldipeas.com.br><img src="avatar.gif"></a>
   </br>
   <a href="https://dev.to/rauldipeas"><img src="https://img.shields.io/badge/dev.to-0A0A0A?logo=devdotto&logoColor=fff&style=for-the-badge"></a>
   <a href="https://bandlab.com/rauldipeas"><img src="https://img.shields.io/badge/BandLab-F12C18?logo=bandlab&logoColor=fff&style=for-the-badge"></a>
