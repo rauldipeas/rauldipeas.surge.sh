@@ -51,12 +51,12 @@ while true; do
     IMAGE_URL=$(echo "$POST" | jq -r '.media_attachments[0].url // ""')
 
     # Determinar título a partir da primeira linha do conteúdo
-    TITLE=$(echo "$CONTENT" | head -n 1 | sed 's/^\s*//;s/\s*$//')
+    TITLE=$(echo "$CONTENT" | awk 'NR==1 {print $0}' | sed 's/^\s*//;s/\s*$//')
 
     # Gerar arquivo Markdown
     FILENAME="$OUTPUT_DIR/$CREATED_AT-$ID.md"
     echo "---" > "$FILENAME"
-    echo "title: $TITLE" >> "$FILENAME"
+    echo "title: \"$TITLE\"" >> "$FILENAME"
     echo "date: $CREATED_AT $TIME" >> "$FILENAME"
     if [ -n "$IMAGE_URL" ]; then
       echo "image: $IMAGE_URL" >> "$FILENAME"
