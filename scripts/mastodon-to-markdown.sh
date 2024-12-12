@@ -48,7 +48,15 @@ while true; do
     CREATED_AT=$(echo "$POST" | jq -r '.created_at' | sed 's/T.*//')
     TIME=$(echo "$POST" | jq -r '.created_at' | sed 's/.*T\(.*\)Z/\1/')
     ID=$(echo "$POST" | jq -r '.id')
+    
+    # Verificar se há anexo de mídia
     IMAGE_URL=$(echo "$POST" | jq -r '.media_attachments[0].url // ""')
+    VIDEO_URL=$(echo "$POST" | jq -r '.media_attachments[] | select(.type=="video") | .url // ""')
+
+    # Se houver vídeo, usar o vídeo como imagem de capa
+    if [ -n "$VIDEO_URL" ]; then
+      IMAGE_URL="$VIDEO_URL"
+    fi
 
     # Determinar título a partir da primeira linha do conteúdo e remover tudo após a primeira hashtag
     TITLE=$(echo "$CONTENT" | awk 'NR==1 {print $0}' | sed 's/^\s*//;s/\s*$//' | sed 's/#.*//')
