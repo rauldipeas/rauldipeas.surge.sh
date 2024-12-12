@@ -25,7 +25,7 @@ POSTS=$(curl -s -H "Authorization: Bearer $ACCESS_TOKEN" \
 # Processar cada postagem
 echo "$POSTS" | jq -c '.[]' | while read -r POST; do
     # Ignorar postagens de resposta ou que começam com "@"
-    CONTENT=$(echo "$POST" | jq -r '.content' | sed 's/<[^>]*>//g')
+    CONTENT=$(echo "$POST" | jq -r '.content' | sed 's/<[^>]*>//g') # Remover tags HTML
     if [[ "$CONTENT" =~ ^@ ]]; then
       continue
     fi
@@ -35,14 +35,15 @@ echo "$POSTS" | jq -c '.[]' | while read -r POST; do
     TIME=$(echo "$POST" | jq -r '.created_at' | sed 's/.*T\(.*\)Z/\1/') # Hora
     ID=$(echo "$POST" | jq -r '.id')
 
-    # Determinar o título - pegar a primeira linha, remover hashtags e espaços extras
-    TITLE=$(echo "$CONTENT" | sed 's/^\s*//;s/\s*$//' | awk 'BEGIN{RS="";}{print $1; exit}' | sed 's/#.*//' | sed 's/\\/\//g')
+    # Determinar o título - pegar a primeira frase, remover hashtags e espaços extras
+    TITLE=$(echo "$CONTENT" | sed 's/^\s*//;s/\s*$//' | awk 'BEGIN{RS=".";}{print $1; exit}' | sed 's/#.*//' | sed 's/\\/\//g')
 
     # Verificar se a postagem tem mídia (imagem ou vídeo)
-    MEDIA_URL=""
+    IMAGE_URL=""
     VIDEO_URL=""
     if [ "$(echo "$POST" | jq -r '.media_attachments | length')" -gt 0 ]; then
-      MEDIA_URL=$(echo "$POST" | jq -r '.media_attachments[0].url')
+      # Pegar a primeira imagem ou vídeo
+      IMAGE_URL=$(echo "$POST" | jq -r '.media_attachments[0].url')
       MEDIA_TYPE=$(echo "$POST" | jq -r '.media_attachments[0].type')
 
       # Se for um vídeo, pegar o URL do vídeo e extrair um frame
@@ -60,7 +61,7 @@ echo "$POSTS" | jq -c '.[]' | while read -r POST; do
           ffmpeg -i "$TEMP_VIDEO_FILE" -vf "select='eq(n\,0)'" -vsync vfr -q:v 2 "$VIDEO_FRAME"
           rm "$TEMP_VIDEO_FILE"
 
-          MEDIA_URL="$VIDEO_FRAME"
+          IMAGE_URL="$VIDEO_FRAME"
         fi
       fi
     fi
@@ -72,8 +73,8 @@ echo "$POSTS" | jq -c '.[]' | while read -r POST; do
     echo "date: $CREATED_AT $TIME" >> "$FILENAME"
 
     # Adicionar imagem de capa (se houver)
-    if [ -n "$MEDIA_URL" ]; then
-      echo "image: /$MEDIA_URL" >> "$FILENAME"
+    if [ -n "$IMAGE_URL" ]; then
+      echo "image: /$IMAGE_URL" >> "$FILENAME"
     fi
 
     echo "---" >> "$FILENAME"
