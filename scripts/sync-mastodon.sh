@@ -35,8 +35,8 @@ echo "$POSTS" | jq -c '.[]' | while read -r POST; do
     TIME=$(echo "$POST" | jq -r '.created_at' | sed 's/.*T\(.*\)Z/\1/') # Hora
     ID=$(echo "$POST" | jq -r '.id')
 
-    # Determinar o título - pegar a primeira frase, remover hashtags e espaços extras
-    TITLE=$(echo "$CONTENT" | sed 's/^\s*//;s/\s*$//' | awk 'BEGIN{RS=".";}{print $1; exit}' | sed 's/#.*//' | sed 's/\\/\//g')
+    # Determinar o título - pegar a primeira linha da postagem
+    TITLE=$(echo "$CONTENT" | awk 'NR==1 {print $0}' | sed 's/#.*//' | sed 's/^\s*//;s/\s*$//' | sed 's/\\/\//g')
 
     # Verificar se a postagem tem mídia (imagem ou vídeo)
     IMAGE_URL=""
@@ -51,7 +51,6 @@ echo "$POSTS" | jq -c '.[]' | while read -r POST; do
         VIDEO_URL=$(echo "$POST" | jq -r '.media_attachments[0].remote_url')
 
         # Usar ffmpeg para pegar um frame central do vídeo (se o ffmpeg estiver disponível)
-        sudo apt install -y ffmpeg
         if command -v ffmpeg &> /dev/null; then
           TEMP_VIDEO_FILE="video_$ID.mp4"
           curl -o "$TEMP_VIDEO_FILE" "$VIDEO_URL"
