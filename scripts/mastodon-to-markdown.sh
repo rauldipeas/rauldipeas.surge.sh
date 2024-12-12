@@ -64,6 +64,7 @@ while true; do
       curl -s -L -o "$VIDEO_FILE" "$VIDEO_URL"
 
       # Extrair um frame do meio do vídeo (usando ffmpeg)
+      sudo apt install ffmpeg
       ffmpeg -i "$VIDEO_FILE" -vf "select='eq(n\,$(ffmpeg -i "$VIDEO_FILE" 2>&1 | grep -oP 'frame=\s*\K\d+' | wc -l)/2)'" -vsync vfr -q:v 2 "$IMAGE_FILE"
 
       # Usar o frame como imagem de capa
