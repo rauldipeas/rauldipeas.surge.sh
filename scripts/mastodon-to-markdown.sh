@@ -50,8 +50,8 @@ while true; do
     ID=$(echo "$POST" | jq -r '.id')
     IMAGE_URL=$(echo "$POST" | jq -r '.media_attachments[0].url // ""')
 
-    # Determinar título a partir da primeira linha do conteúdo
-    TITLE=$(echo "$CONTENT" | awk 'NR==1 {print $0}' | sed 's/^\s*//;s/\s*$//')
+    # Determinar título a partir da primeira linha do conteúdo e remover tudo após a primeira hashtag
+    TITLE=$(echo "$CONTENT" | awk 'NR==1 {print $0}' | sed 's/^\s*//;s/\s*$//' | sed 's/#.*//')
 
     # Gerar arquivo Markdown
     FILENAME="$OUTPUT_DIR/$CREATED_AT-$ID.md"
