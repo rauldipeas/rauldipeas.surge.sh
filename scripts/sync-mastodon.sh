@@ -1,15 +1,15 @@
 #!/bin/bash
 
 # Configurações
-ACCESS_TOKEN="$MASTODON_TOKEN" # Token de acesso à API do Mastodon
-MASTODON_INSTANCE="https://mastodon.social" # Instância do Mastodon
-USERNAME="raul_dipeas" # Nome de usuário
-OUTPUT_DIR="_posts" # Diretório onde os arquivos markdown serão salvos
+ACCESS_TOKEN="$MASTODON_TOKEN"   # Token de acesso à API do Mastodon
+MASTODON_INSTANCE="https://mastodon.social"  # Instância do Mastodon (ajuste conforme necessário)
+USERNAME="raul_dipeas"           # Nome de usuário do Mastodon
+OUTPUT_DIR="_posts"              # Diretório de saída para os arquivos markdown
 
 # Criar diretório para saída
 mkdir -p "$OUTPUT_DIR"
 
-# Obter o ID do usuário
+# Obter o ID do usuário no Mastodon
 USER_ID=$(curl -s -H "Authorization: Bearer $ACCESS_TOKEN" \
   "$MASTODON_INSTANCE/api/v1/accounts/lookup?acct=$USERNAME" | jq -r '.id')
 
@@ -18,28 +18,24 @@ if [ -z "$USER_ID" ]; then
   exit 1
 fi
 
-# Variável para paginação
-MAX_ID=""
-
 # Buscar as postagens do usuário
-URL="$MASTODON_INSTANCE/api/v1/accounts/$USER_ID/statuses?limit=40"
-POSTS=$(curl -s -H "Authorization: Bearer $ACCESS_TOKEN" "$URL")
+POSTS=$(curl -s -H "Authorization: Bearer $ACCESS_TOKEN" \
+  "$MASTODON_INSTANCE/api/v1/accounts/$USER_ID/statuses?limit=40")
 
 # Processar cada postagem
 echo "$POSTS" | jq -c '.[]' | while read -r POST; do
-    # Ignorar postagens de resposta
-    IN_REPLY_TO_ID=$(echo "$POST" | jq -r '.in_reply_to_id')
-    if [ "$IN_REPLY_TO_ID" != "null" ]; then
+    # Ignorar postagens de resposta ou que começam com "@"
+    CONTENT=$(echo "$POST" | jq -r '.content' | sed 's/<[^>]*>//g')
+    if [[ "$CONTENT" =~ ^@ ]]; then
       continue
     fi
 
-    # Extrair informações da postagem
-    CONTENT=$(echo "$POST" | jq -r '.content' | sed 's/<[^>]*>//g') # Remover tags HTML
+    # Extrair a data, hora e ID
     CREATED_AT=$(echo "$POST" | jq -r '.created_at' | sed 's/T.*//') # Data
     TIME=$(echo "$POST" | jq -r '.created_at' | sed 's/.*T\(.*\)Z/\1/') # Hora
-    ID=$(echo "$POST" | jq -r '.id') # ID da postagem
+    ID=$(echo "$POST" | jq -r '.id')
 
-    # Determinar título a partir da primeira linha do conteúdo
+    # Determinar o título - pegar a primeira linha, remover hashtags e espaços extras
     TITLE=$(echo "$CONTENT" | sed 's/^\s*//;s/\s*$//' | awk 'BEGIN{RS="";}{print $1; exit}' | sed 's/#.*//' | sed 's/\\/\//g')
 
     # Verificar se a postagem tem mídia (imagem ou vídeo)
@@ -54,6 +50,7 @@ echo "$POSTS" | jq -c '.[]' | while read -r POST; do
         VIDEO_URL=$(echo "$POST" | jq -r '.media_attachments[0].remote_url')
 
         # Usar ffmpeg para pegar um frame central do vídeo (se o ffmpeg estiver disponível)
+        sudo apt install -y ffmpeg
         if command -v ffmpeg &> /dev/null; then
           TEMP_VIDEO_FILE="video_$ID.mp4"
           curl -o "$TEMP_VIDEO_FILE" "$VIDEO_URL"
