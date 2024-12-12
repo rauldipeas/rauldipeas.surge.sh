@@ -22,8 +22,8 @@ author_image: "https://rauldipeas.com.br/assets/images/avatar.jpg"
 
 paginate:	5
 
-url: "./" # the base hostname & protocol for your site
-baseurl: "./"
+url: "" # the base hostname & protocol for your site
+baseurl: "./blog"
 #used to display twitter cards
 twitter_handle: ''
 
