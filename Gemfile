@@ -6,3 +6,5 @@ source "https://rubygems.org"
 gem "github-pages"
 gem "bourbon"
 gem "jemoji"
+
+gem "jekyll-theme-chirpy", "~> 5.6", ">= 5.6.1"
