@@ -15,7 +15,7 @@ jobs:
       - name: Sincronização com o Mastodon
         run: |
           bash scripts/mastodon-to-markdown.sh
-          mv posts/*.sh social/_posts
+          mv posts/*.md social/_posts
       - name: Compilação do Jekyll (social)
         run: bundle exec jekyll build -s social -d site/social
         env:
