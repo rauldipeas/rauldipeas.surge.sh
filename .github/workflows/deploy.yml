@@ -8,10 +8,10 @@ jobs:
       - uses: ruby/setup-ruby@v1
         with:
           bundler-cache: true
-#      - name: Compilação do Jekyll (blog)
-#        run: bundle exec jekyll build -s blog -d site/blog
-#        env:
-#          JEKYLL_ENV: production
+      - name: Compilação do Jekyll (blog)
+        run: bundle exec jekyll build -s blog -d site/blog
+        env:
+          JEKYLL_ENV: production
       - name: Compilação do Jekyll (social)
         run: bundle exec jekyll build -s social -d site/social
         env:
