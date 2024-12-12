@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Configurações
-ACCESS_TOKEN="MASTODON_TOKEN"
+ACCESS_TOKEN="$MASTODON_TOKEN"
 MASTODON_INSTANCE="https://mastodon.social"
 USERNAME="raul_dipeas"
 OUTPUT_DIR="posts"
@@ -37,17 +37,30 @@ while true; do
 
   # Processar cada postagem
   echo "$POSTS" | jq -c '.[]' | while read -r POST; do
+    # Ignorar respostas
+    IN_REPLY_TO_ID=$(echo "$POST" | jq -r '.in_reply_to_id')
+    if [ "$IN_REPLY_TO_ID" != "null" ]; then
+      continue
+    fi
+
     # Extrair informações da postagem
     CONTENT=$(echo "$POST" | jq -r '.content' | sed 's/<[^>]*>//g')
     CREATED_AT=$(echo "$POST" | jq -r '.created_at' | sed 's/T.*//')
     TIME=$(echo "$POST" | jq -r '.created_at' | sed 's/.*T\(.*\)Z/\1/')
     ID=$(echo "$POST" | jq -r '.id')
+    IMAGE_URL=$(echo "$POST" | jq -r '.media_attachments[0].url // ""')
+
+    # Determinar título a partir da primeira linha do conteúdo
+    TITLE=$(echo "$CONTENT" | head -n 1 | sed 's/^\s*//;s/\s*$//')
 
     # Gerar arquivo Markdown
     FILENAME="$OUTPUT_DIR/$CREATED_AT-$ID.md"
     echo "---" > "$FILENAME"
-    echo "title: Postagem $ID" >> "$FILENAME"
+    echo "title: $TITLE" >> "$FILENAME"
     echo "date: $CREATED_AT $TIME" >> "$FILENAME"
+    if [ -n "$IMAGE_URL" ]; then
+      echo "image: $IMAGE_URL" >> "$FILENAME"
+    fi
     echo "---" >> "$FILENAME"
     echo "$CONTENT" >> "$FILENAME"
 
