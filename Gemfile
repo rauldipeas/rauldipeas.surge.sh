@@ -3,14 +3,14 @@
 source "https://rubygems.org"
 
 # 'github-pages' includes 'jekyll' gem 
-gem "jekyll"
+gem "github-pages"
 gem "bourbon"
 gem "jemoji"
 
-gem "jekyll-theme-chirpy", "~> 5.6", ">= 5.6.1"
+gem "jekyll-theme-chirpy"
 
 group :test do
-  gem "html-proofer", "~> 3.18"
+  gem "html-proofer"
 end
 
 # Windows and JRuby does not include zoneinfo files, so bundle the tzinfo-data gem
@@ -29,5 +29,5 @@ gem "http_parser.rb", "~> 0.6.0", :platforms => [:jruby]
 
 # Lock jekyll-sass-converter to 2.x on Linux-musl
 if RUBY_PLATFORM =~ /linux-musl/
-  gem "jekyll-sass-converter", "~> 2.0"
+  gem "jekyll-sass-converter"
 end
