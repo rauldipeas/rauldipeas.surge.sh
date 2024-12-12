@@ -10,15 +10,15 @@ description: > # this means to ignore newlines until "email:"
 
 email: ""
 #blog logo
-logo: "assets/images/avatar.jpg"
+logo: "/assets/images/avatar.jpg"
 float_logo: false # true, false (default)
 
 # blog cover
-cover: "assets/images/backgrounds/street-1.gif"
+cover: "/assets/images/backgrounds/street-1.gif"
 
 name: 'Raul Dipeas'
 author: 'Raul Dipeas'
-author_image: "assets/images/avatar.jpg"
+author_image: "/assets/images/avatar.jpg"
 
 paginate:	5
 
