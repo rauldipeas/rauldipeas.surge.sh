@@ -61,13 +61,13 @@ layout: default
         <article class="post" itemscope itemtype="http://schema.org/BlogPosting" role="article">
           <div class="article-item">
             <header class="post-header">
-              <h2 class="post-title" itemprop="name">{{ post.title }}</h2>
+              <h2 class="post-title" itemprop="name"><a href="{{ post.url | prepend: site.baseurl }}" itemprop="url">{{ post.title }}</a></h2>
               </br>
-              <span><img src="{{ post.image }}" style="max-width: 800px;width: 100%;border-radius: 10px;"></span>
+              <a href="{{ post.url | prepend: site.baseurl }}"><img src="{{ site.baseurl }}{{ post.image }}" style="max-width: 800px;width: 100%;border-radius: 10px;"></a>
             </header>
-            <!--<section class="post-excerpt" itemprop="description">
+            <section class="post-excerpt" itemprop="description">
               <p>{{ post.excerpt | strip_html | truncatewords: 50 }}</p>
-            </section>-->
+            </section>
             <div class="post-meta">
               <time datetime="{{ post.date | date_to_long_string }}">{{ post.date | date_to_long_string }}</time>
 <!--            <span class="post-tags-set">on {{#foreach tags}}<span class="post-tag-{{slug}}">{{#if @first}}{{else}}, {{/if}}<a href="/tag/{{slug}}">{{name}}</a></span>{{/foreach}}</span>-->
