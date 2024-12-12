@@ -28,6 +28,6 @@ if RUBY_PLATFORM =~ /linux-musl/
 end
 
 # 'github-pages' includes 'jekyll' gem 
-#gem "github-pages"
+gem "github-pages"
 gem "bourbon"
 gem "jemoji"
