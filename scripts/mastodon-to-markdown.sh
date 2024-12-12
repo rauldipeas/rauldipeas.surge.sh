@@ -5,9 +5,11 @@ ACCESS_TOKEN="$MASTODON_TOKEN"
 MASTODON_INSTANCE="https://mastodon.social"
 USERNAME="raul_dipeas"
 OUTPUT_DIR="posts"
+VIDEO_DIR="videos"
+IMAGE_DIR="images"
 
-# Criar diretório para saída
-mkdir -p "$OUTPUT_DIR"
+# Criar diretórios para saída
+mkdir -p "$OUTPUT_DIR" "$VIDEO_DIR" "$IMAGE_DIR"
 
 # Obter o ID do usuário
 USER_ID=$(curl -s -H "Authorization: Bearer $ACCESS_TOKEN" \
@@ -53,13 +55,24 @@ while true; do
     IMAGE_URL=$(echo "$POST" | jq -r '.media_attachments[0].url // ""')
     VIDEO_URL=$(echo "$POST" | jq -r '.media_attachments[] | select(.type=="video") | .url // ""')
 
-    # Se houver vídeo, usar o vídeo como imagem de capa
+    # Se houver vídeo, extrair um frame
     if [ -n "$VIDEO_URL" ]; then
-      IMAGE_URL="$VIDEO_URL"
+      VIDEO_FILE="$VIDEO_DIR/$ID.mp4"
+      IMAGE_FILE="$IMAGE_DIR/$ID-frame.jpg"
+      
+      # Baixar o vídeo
+      curl -s -L -o "$VIDEO_FILE" "$VIDEO_URL"
+
+      # Extrair um frame do meio do vídeo (usando ffmpeg)
+      ffmpeg -i "$VIDEO_FILE" -vf "select='eq(n\,$(ffmpeg -i "$VIDEO_FILE" 2>&1 | grep -oP 'frame=\s*\K\d+' | wc -l)/2)'" -vsync vfr -q:v 2 "$IMAGE_FILE"
+
+      # Usar o frame como imagem de capa
+      IMAGE_URL="$IMAGE_FILE"
     fi
 
-    # Determinar título a partir da primeira linha do conteúdo e remover tudo após a primeira hashtag
-    TITLE=$(echo "$CONTENT" | awk 'NR==1 {print $0}' | sed 's/^\s*//;s/\s*$//' | sed 's/#.*//')
+    # Determinar título a partir da primeira linha do conteúdo
+    # Cortar o primeiro parágrafo (primeira linha vazia) e remover barras invertidas
+    TITLE=$(echo "$CONTENT" | awk 'BEGIN{RS="";}{print $0; exit}' | sed 's/^\s*//;s/\s*$//' | sed 's/#.*//' | sed 's/\\/\//g')
 
     # Gerar arquivo Markdown
     FILENAME="$OUTPUT_DIR/$CREATED_AT-$ID.md"
