@@ -2,6 +2,12 @@
 
 source "https://rubygems.org"
 
+# 'github-pages' includes 'jekyll' gem 
+gem "jekyll"
+gem "github-pages"
+gem "bourbon"
+gem "jemoji"
+
 gem "jekyll-theme-chirpy", "~> 5.6", ">= 5.6.1"
 
 group :test do
@@ -26,8 +32,3 @@ gem "http_parser.rb", "~> 0.6.0", :platforms => [:jruby]
 if RUBY_PLATFORM =~ /linux-musl/
   gem "jekyll-sass-converter", "~> 2.0"
 end
-
-# 'github-pages' includes 'jekyll' gem 
-gem "github-pages"
-gem "bourbon"
-gem "jemoji"
